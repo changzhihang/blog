@@ -1,6 +1,6 @@
 baseURL = 'https://changzhihang.github.io/blog/'
 locale = 'zh-cn'
-title = 'Blog of Zhihang'
+title = 'Blog of Brian'
 theme = 'PaperMod'
 
 # Pagination: posts per page
