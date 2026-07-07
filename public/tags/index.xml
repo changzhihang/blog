@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Blog of Zhihang</title>
+    <link>http://localhost:1313/blog/tags/</link>
+    <description>Recent content in Tags on Blog of Zhihang</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 07 Jul 2026 14:44:35 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Note</title>
+      <link>http://localhost:1313/blog/tags/note/</link>
+      <pubDate>Tue, 07 Jul 2026 14:44:35 +0800</pubDate>
+      <guid>http://localhost:1313/blog/tags/note/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

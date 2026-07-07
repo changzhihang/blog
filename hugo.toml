@@ -1,0 +1,29 @@
+baseURL = 'https://changzhihang.github.io/blog/'
+locale = 'zh-cn'
+title = 'Blog of Zhihang'
+theme = 'PaperMod'
+
+# Pagination: posts per page
+[pagination]
+  pagerSize = 10
+
+[params]
+  # Text shown on the homepage
+  description = "Zhihang's new blog"
+  # Show reading time on posts
+  ShowReadingTime = true
+  # Show a table of contents on posts
+  ShowToc = true
+
+[menu]
+  # Top navigation menu items
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
