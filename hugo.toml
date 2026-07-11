@@ -15,6 +15,14 @@ theme = 'PaperMod'
   # Show a table of contents on posts
   ShowToc = true
 
+# Preserve LaTeX math delimiters so KaTeX can render them client-side
+[markup]
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['$$', '$$'], ['\[', '\]']]
+      inline = [['$', '$'], ['\(', '\)']]
+
 [menu]
   # Top navigation menu items
   [[menu.main]]
