@@ -23,7 +23,7 @@ $$E = \frac{F}{q}$$
 
 $$E = \frac{F}{q} \quad(\text{定义式，万能}) \qquad E = \frac{kQ}{r^2} \quad(\text{点电荷}) \qquad E = \frac{U}{d} \quad(\text{平行板})$$
 
-其中 $k = 9\times10^9\ \text{N·m}^2/\text{C}^2$。多个电场叠加时按矢量求和：$\vec{E}_{\text{总}} = \vec{E}_1 + \vec{E}_2 + \cdots$。
+其中 $k = 9\times10^9\ \text{N}\cdot\text{m}^2/\text{C}^2$。多个电场叠加时按矢量求和：$\vec{E}_{\text{总}} = \vec{E}_1 + \vec{E}_2 + \cdots$。
 
 **平行板为什么是匀强电场？** 极板上电荷均匀分布，电场线平行等距，所以处处场强相同（忽略边缘效应）。$E = U/d$ 的物理图像是：总电位差 $U$ 均匀地摊在间距 $d$ 上，就像等坡度的斜面。推导也很直接：
 
