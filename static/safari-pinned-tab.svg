@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Monochrome "B" mask icon for Safari pinned tabs; Safari applies the user-chosen color. -->
+  <path fill="#000000" fill-rule="evenodd"
+        d="M8 4h9a6 6 0 0 1 3.2 11.1A6.2 6.2 0 0 1 17.5 28H8V4zm5 4v6h4a3 3 0 0 0 0-6h-4zm0 10v6h4.2a3 3 0 0 0 0-6H13z"/>
+</svg>
