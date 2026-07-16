@@ -36,6 +36,11 @@ theme = 'PaperMod'
     url = "/exercises/"
     weight = 15
   [[menu.main]]
+    identifier = "english"
+    name = "英语学习"
+    url = "/english/"
+    weight = 17
+  [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
