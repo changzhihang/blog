@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电磁学关系强化练习 · 对答案</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  :root{--bg:#f6f7fb;--card:#fff;--ink:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#7c3aed;--ans:#16a34a;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;}
+  header{background:linear-gradient(135deg,#5b21b6,#7c3aed);color:#fff;padding:1.8rem 1.2rem;text-align:center;}
+  header h1{margin:.2rem 0;font-size:1.5rem}
+  header p{margin:.3rem 0;opacity:.9;font-size:.9rem}
+  .wrap{max-width:860px;margin:0 auto;padding:1rem 1.1rem 4rem;}
+  .toolbar{position:sticky;top:0;z-index:10;background:var(--bg);padding:.7rem 0;margin-bottom:.5rem;
+    border-bottom:1px solid var(--line);display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;}
+  .btn{cursor:pointer;border:none;border-radius:20px;padding:.5rem 1.1rem;font-size:.92rem;font-weight:600;}
+  .btn-main{background:var(--accent);color:#fff;}
+  .btn-ghost{background:#f3eefc;color:var(--accent);border:1px solid var(--line);}
+  .hint{color:var(--muted);font-size:.85rem}
+  .prob{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin:.9rem 0;}
+  .prob-title{font-weight:700;color:var(--accent);font-size:1.05rem;margin-bottom:.3rem}
+  .stem{margin:.2rem 0 .6rem}
+  .choices{margin:.2rem 0 .4rem;padding-left:.2rem}
+  .choices div{margin:.15rem 0}
+  .quote{border-left:3px solid var(--line);padding:.3rem .7rem;color:var(--muted);font-size:.9rem;background:#fafafa;border-radius:0 8px 8px 0;margin:.5rem 0}
+  .subq{cursor:pointer;padding:.4rem .6rem;border-radius:8px;margin:.35rem 0;border:1px dashed var(--line);
+    background:#fcfbff;transition:background .15s;position:relative;}
+  .subq:hover{background:#f4eefe}
+  .subq::after{content:"▸ 点击看答案";float:right;color:var(--accent);font-size:.8rem;opacity:.75}
+  .subq.open::after{content:"▾ 收起"}
+  .subq.note-q{background:#fffdf5;border-color:#fde9c8}
+  .subq.note-q::after{content:"💡 点击看点评"}
+  .subq.note-q.open::after{content:"▾ 收起"}
+  .answer{display:none;margin:.1rem 0 .5rem;padding:.6rem .9rem;border-left:4px solid var(--ans);
+    background:#f0fdf4;border-radius:0 8px 8px 0;}
+  .answer.show{display:block}
+  .answer .lead{font-weight:700;color:var(--ans)}
+  .answer.note{border-left-color:#eab308;background:#fffbeb}
+  table{border-collapse:collapse;margin:.4rem 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.25rem .6rem;text-align:center}
+  th{background:#f3f4f6}
+  footer{color:var(--muted);font-size:.85rem;text-align:center;padding:1.5rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>电磁学 · 物理量关系强化练习 · 对答案</h1>
+  <p>点击任一小题 → 看该小题答案　·　点「全部显示答案」→ 看整套答案</p>
+</header>
+<div class="wrap">
+  <div class="toolbar">
+    <button class="btn btn-main" id="allBtn" onclick="toggleAll(this)">👁 全部显示答案</button>
+    <button class="btn btn-ghost" onclick="hideAll();document.getElementById('allBtn').textContent='👁 全部显示答案'">全部隐藏</button>
+    <span class="hint">训练目标：吃透各物理量之间的关系与相互制约。</span>
+  </div>
+
+  <!-- ============ A 组 ============ -->
+  <h2>A 组 · 关系辨析题（多选）</h2>
+
+  <div class="prob">
+    <div class="prob-title">A1.</div>
+    <div class="stem">平行板电容器充电后<b>断开电源</b>（电荷 $Q$ 保持不变），再将间距 $d$ 增大一倍，其余不变。则（多选）</div>
+    <div class="choices"><div>A. 电容 $C$ 变为原来的一半</div><div>B. 板间场强 $E$ 保持不变</div><div>C. 两板电压 $U$ 变为原来的 2 倍</div><div>D. 电容器储存的能量变为原来的一半</div></div>
+    <div class="quote">对比思考：若改为<b>始终接电源</b>（$U$ 不变）增大 $d$，上面哪些会不同？</div>
+    <div class="subq" onclick="tog(this)">显示 A1 答案</div>
+    <div class="answer"><span class="lead">答案：ABC</span>　<b>断电源 → 电荷 $Q$ 被钳制</b>。
+      <div>• A 对：$C=\dfrac{\varepsilon S}{4\pi kd}$，$d$ 加倍 → $C$ 减半。</div>
+      <div>• B 对：$E=\dfrac{\sigma}{\varepsilon_0}=\dfrac{Q}{\varepsilon_0 S}$，$Q,S$ 不变 → <b>$E$ 与 $d$ 无关，不变</b>。</div>
+      <div>• C 对：$U=Ed$，$E$ 不变、$d$ 加倍 → $U$ 加倍。</div>
+      <div>• <b>D 错</b>：$W=\dfrac{Q^2}{2C}$，$C$ 减半 → $W$ <b>加倍</b>。多出的能量来自外力拉开两板做的功。</div>
+      <div>对比：接电源（$U$ 不变）时 $E=\dfrac Ud$ <b>减半</b>、$Q$ 减半、$W$ 减半。<b>断电源看 $\sigma$，接电源看 $U$。</b></div>
+    </div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">A2.</div>
+    <div class="stem">带电粒子在匀强磁场做匀速圆周运动。若<b>只</b>把速率增大为原来 2 倍（电荷、质量、磁场不变），则（多选）</div>
+    <div class="choices"><div>A. 轨道半径变为 2 倍</div><div>B. 周期变为 2 倍</div><div>C. 动能变为 4 倍</div><div>D. 每秒转的圈数（频率）不变</div></div>
+    <div class="subq" onclick="tog(this)">显示 A2 答案</div>
+    <div class="answer"><span class="lead">答案：ACD</span>　$r=\dfrac{mv}{qB}$、$T=\dfrac{2\pi m}{qB}$。
+      <div>• A 对：$r\propto v$ → 加倍。</div>
+      <div>• <b>B 错</b> / D 对：$T$、$f$ 与 $v$ <b>无关</b> → 不变。</div>
+      <div>• C 对：$E_k=\dfrac12mv^2\propto v^2$ → 4 倍。</div>
+    </div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">A3.</div>
+    <div class="stem">正交匀强电场 $E$ 与磁场 $B$ 构成<b>速度选择器</b>，带电粒子垂直射入，恰好匀速直线通过。则（多选）</div>
+    <div class="choices"><div>A. 能通过的速度 $v=\dfrac{E}{B}$，与电荷量、质量都无关</div><div>B. 若 $E$ 增大一倍，能通过的速度变为 2 倍</div><div>C. 若 $B$ 增大一倍，能通过的速度变为一半</div><div>D. 速度大于 $\dfrac{E}{B}$ 的粒子，合力方向与电场力方向相同</div></div>
+    <div class="subq" onclick="tog(this)">显示 A3 答案</div>
+    <div class="answer"><span class="lead">答案：ABC</span>　平衡 $qE=qvB\Rightarrow v=\dfrac EB$。
+      <div>• A 对：$q$ 约掉、与 $m$ 无关 → 只挑速度，不问种类。</div>
+      <div>• B 对：$v\propto E$ → 加倍；C 对：$v\propto\dfrac1B$ → 减半。</div>
+      <div>• <b>D 错</b>：$v>\dfrac EB$ 时磁场力 $qvB>qE$，<b>合力沿磁场力方向</b>，与电场力<b>相反</b>。</div>
+    </div>
+  </div>
+
+  <!-- ============ B 组 ============ -->
+  <h2>B 组 · 关系综合计算题</h2>
+
+  <div class="prob">
+    <div class="prob-title">B1.（电场加速 + 磁场圆周 · 比荷关系）</div>
+    <div class="stem">质量 $m$、电荷 $q$ 的正粒子从静止经电压 $U$ 加速，垂直进入磁场 $B$ 做圆周运动，半径 $r$。</div>
+    <div class="subq" onclick="tog(this)">(1) 证明比荷 $\dfrac{q}{m}=\dfrac{2U}{B^2r^2}$</div>
+    <div class="answer">加速 $qU=\dfrac12mv^2$，圆周 $r=\dfrac{mv}{qB}$ 即 $v=\dfrac{qBr}{m}$，代入：$qU=\dfrac{q^2B^2r^2}{2m}\Rightarrow\boxed{\dfrac qm=\dfrac{2U}{B^2r^2}}$</div>
+    <div class="subq" onclick="tog(this)">(2) $U$ 增大一倍（同粒子、同 $B$），$r$ 如何变？</div>
+    <div class="answer">$r^2\propto U$ → $r\propto\sqrt U$，$U$ 加倍 → $r$ 变为 $\boxed{\sqrt2}$ 倍。</div>
+    <div class="subq" onclick="tog(this)">(3) 改用电荷 $2q$、质量 $4m$ 的粒子（同 $U$、同 $B$），$r$ 变几倍？</div>
+    <div class="answer">$r\propto\sqrt{\dfrac mq}$：$\dfrac{r'}{r}=\sqrt{\dfrac{4m/2q}{m/q}}=\boxed{\sqrt2}$ 倍。</div>
+    <div class="subq note-q" onclick="tog(this)">关系链条</div>
+    <div class="answer note">加速定 $v$ → 圆周定 $r$ → 消 $v$。核心 $r\propto\sqrt U$、$r\propto\sqrt{m/q}$。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B2.（电容器 · U 恒 vs Q 恒 全对照）</div>
+    <div class="stem">平行板电容器面积 $S$、间距 $d$，充到电压 $U_0$。把间距增大一倍。<b>情形①</b> 始终接电源（$U$ 不变）；<b>情形②</b> 先断电源（$Q$ 不变）。求两情形下 $C,Q,U,E,W$ 各变几倍，并解释 $E$ 为何不同。</div>
+    <div class="subq" onclick="tog(this)">显示对照表与解释</div>
+    <div class="answer">$C=\dfrac{\varepsilon S}{4\pi kd}$，两情形都<b>减半</b>。
+      <table><tr><th>量</th><th>①（$U$ 不变）</th><th>②（$Q$ 不变）</th></tr>
+      <tr><td>$C$</td><td>减半</td><td>减半</td></tr>
+      <tr><td>$Q$</td><td>减半</td><td>不变</td></tr>
+      <tr><td>$U$</td><td>不变</td><td>加倍</td></tr>
+      <tr><td>$E$</td><td>$\dfrac Ud$→减半</td><td>$\dfrac{\sigma}{\varepsilon_0}$→不变</td></tr>
+      <tr><td>$W$</td><td>减半</td><td>加倍</td></tr></table>
+      <div><b>$E$ 为何不同</b>：①电压被钳制，$E=\dfrac Ud$ 随 $d$ 降；②电荷（$\sigma$）被钳制，$E=\dfrac{\sigma}{\varepsilon_0}$ 与 $d$ 无关。</div>
+    </div>
+    <div class="subq note-q" onclick="tog(this)">题眼</div>
+    <div class="answer note">先认清哪个量被钳制，再选对应的场强公式，其余全顺着推。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B3.（速度选择器 + 质谱仪 · 关系链）</div>
+    <div class="stem">粒子束（电荷均为 $q$）先经速度选择器（正交 $E$、$B_1$）选出速度 $v$，再进入只有磁场 $B_2$ 的区域做半圆打在感光板上。</div>
+    <div class="subq" onclick="tog(this)">(1) 求选出的速度 $v$</div>
+    <div class="answer">$\boxed{v=\dfrac{E}{B_1}}$</div>
+    <div class="subq" onclick="tog(this)">(2) 求在 $B_2$ 中的半径 $r$</div>
+    <div class="answer">$r=\dfrac{mv}{qB_2}=\boxed{\dfrac{mE}{qB_1B_2}}$</div>
+    <div class="subq" onclick="tog(this)">(3) 两同位素 $m_1,m_2$，求落点间距 $\Delta x$</div>
+    <div class="answer">落点距入口为直径 $2r$：$\boxed{\Delta x=|2r_1-2r_2|=\dfrac{2E}{qB_1B_2}|m_1-m_2|}$</div>
+    <div class="subq note-q" onclick="tog(this)">关系链条</div>
+    <div class="answer note">选速度（与质量无关）→ 半径 $r\propto m$ → 质量不同则落点分开。质谱仪按质量分离同位素的原理。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B4.（导轨 · 复合比例 + 功率）</div>
+    <div class="stem">水平光滑导轨间距 $L$、竖直磁场 $B$、末端电阻 $R$，棒质量 $m$、受恒定外力 $F$，从静止趋于最大速度。</div>
+    <div class="subq" onclick="tog(this)">(1) 求最大速度 $v_{max}$</div>
+    <div class="answer">$a=0$ 时 $F=\dfrac{B^2L^2v_{max}}{R}$：$\boxed{v_{max}=\dfrac{FR}{B^2L^2}}$</div>
+    <div class="subq" onclick="tog(this)">(2) $B$ 增大一倍，$v_{max}$ 变几倍？</div>
+    <div class="answer">$v_{max}\propto\dfrac{1}{B^2}$ → 变为 $\boxed{\dfrac14}$。</div>
+    <div class="subq" onclick="tog(this)">(3) $R$ 与 $B$ 同时增大一倍，$v_{max}$ 变几倍？</div>
+    <div class="answer">$v_{max}\propto\dfrac{R}{B^2}$，$R\times2$、$B^2\times4$ → $\boxed{\dfrac12}$。</div>
+    <div class="subq" onclick="tog(this)">(4) 求 $i_{max}$、功率 $P$，验证 $P=Fv_{max}$</div>
+    <div class="answer">$i_{max}=\dfrac{BLv_{max}}{R}=\dfrac{F}{BL}$；$P=i_{max}^2R=\dfrac{F^2R}{B^2L^2}$。验证 $Fv_{max}=\dfrac{F^2R}{B^2L^2}$ ✓（匀速时外力功率全变焦耳热）。</div>
+    <div class="subq note-q" onclick="tog(this)">关系链条</div>
+    <div class="answer note">$v_{max}\propto R/B^2$ 是复合比例；$P=Fv_{max}$ 体现"机械功率=电功率"。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B5.（LC 振荡 · 量间关系与缩放）</div>
+    <div class="stem">理想 LC 电路，电感 $L$、电容 $C$，最大电荷 $Q_0$。</div>
+    <div class="subq" onclick="tog(this)">(1) 写出最大电流 $I_0$、最大电压 $U_0$</div>
+    <div class="answer">$\boxed{I_0=\dfrac{Q_0}{\sqrt{LC}},\quad U_0=\dfrac{Q_0}{C}}$</div>
+    <div class="subq" onclick="tog(this)">(2) $Q_0$ 不变、$C\to4C$，$I_0,U_0,T$ 各变几倍？</div>
+    <div class="answer">$I_0\propto\dfrac{1}{\sqrt C}$ → $\dfrac12$；$U_0\propto\dfrac1C$ → $\dfrac14$；$T=2\pi\sqrt{LC}\propto\sqrt C$ → $2$ 倍。</div>
+    <div class="subq" onclick="tog(this)">(3) 电荷为 $\dfrac{Q_0}{2}$ 时电流为多少？</div>
+    <div class="answer">$i=I_0\sqrt{1-\left(\dfrac{q}{Q_0}\right)^2}=I_0\sqrt{1-\dfrac14}=\boxed{\dfrac{\sqrt3}{2}I_0}$</div>
+    <div class="subq note-q" onclick="tog(this)">关系链条</div>
+    <div class="answer note">$I_0\propto1/\sqrt C$、$U_0\propto1/C$、$T\propto\sqrt C$——同一个 $C$ 变化，三者按不同幂次联动。$q$-$i$ 是二次式（非线性）。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B6.（回旋加速器 · 关系挑战）</div>
+    <div class="stem">回旋加速器：粒子电荷 $q$、质量 $m$，磁场 $B$，最大回旋半径 $R$。</div>
+    <div class="subq" onclick="tog(this)">(1) 求周期 $T$、频率 $f$，并说明为何与速度、半径无关</div>
+    <div class="answer">$\boxed{T=\dfrac{2\pi m}{qB},\ f=\dfrac{qB}{2\pi m}}$。因 $r=\dfrac{mv}{qB}$ 随 $v$ 正比增大，恰好使 $T=\dfrac{2\pi r}{v}=\dfrac{2\pi m}{qB}$ 恒定——转得快的圈也大。这是它能用固定频率持续加速的关键。</div>
+    <div class="subq" onclick="tog(this)">(2) 求最大动能 $E_k$</div>
+    <div class="answer">最大半径处 $v_{max}=\dfrac{qBR}{m}$：$E_k=\dfrac12mv_{max}^2=\boxed{\dfrac{q^2B^2R^2}{2m}}$</div>
+    <div class="subq" onclick="tog(this)">(3) $B$ 加倍、或质量加倍（$q$ 不变），$E_k$ 各变几倍？</div>
+    <div class="answer">$B$ 加倍：$E_k\propto B^2$ → $\boxed{4}$ 倍；质量加倍：$E_k\propto\dfrac1m$ → $\boxed{\dfrac12}$。</div>
+    <div class="subq note-q" onclick="tog(this)">关系链条</div>
+    <div class="answer note">周期与 $v$ 无关（可固定频率）→ 最大能量 $\propto B^2R^2/m$，磁场和尺寸决定能量上限。</div>
+  </div>
+
+</div>
+<footer>点击小题看答案　·　「全部显示答案」一次展开全部　·　公式渲染 MathJax</footer>
+<script>
+function tog(el){
+  el.classList.toggle('open');
+  const a=el.nextElementSibling;
+  if(a&&a.classList.contains('answer')) a.classList.toggle('show');
+}
+function hideAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.remove('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.remove('open'));
+}
+function showAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.add('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.add('open'));
+}
+function toggleAll(btn){
+  const anyHidden=[...document.querySelectorAll('.answer')].some(a=>!a.classList.contains('show'));
+  if(anyHidden){showAll();btn.textContent='🙈 全部隐藏答案';}
+  else{hideAll();btn.textContent='👁 全部显示答案';}
+}
+</script>
+</body>
+</html>

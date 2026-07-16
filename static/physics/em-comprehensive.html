@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电磁学综合练习题 · 对答案</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  :root{--bg:#f6f7fb;--card:#fff;--ink:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--ans:#16a34a;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;}
+  header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:1.8rem 1.2rem;text-align:center;}
+  header h1{margin:.2rem 0;font-size:1.5rem}
+  header p{margin:.3rem 0;opacity:.9;font-size:.9rem}
+  .wrap{max-width:860px;margin:0 auto;padding:1rem 1.1rem 4rem;}
+  .toolbar{position:sticky;top:0;z-index:10;background:var(--bg);padding:.7rem 0;margin-bottom:.5rem;
+    border-bottom:1px solid var(--line);display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;}
+  .btn{cursor:pointer;border:none;border-radius:20px;padding:.5rem 1.1rem;font-size:.92rem;font-weight:600;}
+  .btn-main{background:var(--accent);color:#fff;}
+  .btn-ghost{background:#eef2ff;color:var(--accent);border:1px solid var(--line);}
+  .hint{color:var(--muted);font-size:.85rem}
+  .prob{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin:.9rem 0;}
+  .prob-title{font-weight:700;color:var(--accent);font-size:1.05rem;margin-bottom:.3rem}
+  .stem{margin:.2rem 0 .6rem}
+  .choices{margin:.2rem 0 .4rem;padding-left:.2rem}
+  .choices div{margin:.15rem 0}
+  .quote{border-left:3px solid var(--line);padding:.3rem .7rem;color:var(--muted);font-size:.9rem;background:#fafafa;border-radius:0 8px 8px 0;margin:.5rem 0}
+  .subq{cursor:pointer;padding:.4rem .6rem;border-radius:8px;margin:.35rem 0;border:1px dashed var(--line);
+    background:#fbfcff;transition:background .15s;position:relative;}
+  .subq:hover{background:#eef4ff}
+  .subq::after{content:"▸ 点击看答案";float:right;color:var(--accent);font-size:.8rem;opacity:.75}
+  .subq.open::after{content:"▾ 收起"}
+  .subq.note-q{background:#fffdf5;border-color:#fde9c8}
+  .subq.note-q::after{content:"💡 点击看点评"}
+  .subq.note-q.open::after{content:"▾ 收起"}
+  .answer{display:none;margin:.1rem 0 .5rem;padding:.6rem .9rem;border-left:4px solid var(--ans);
+    background:#f0fdf4;border-radius:0 8px 8px 0;}
+  .answer.show{display:block}
+  .answer .lead{font-weight:700;color:var(--ans)}
+  .answer.note{border-left-color:#eab308;background:#fffbeb}
+  table{border-collapse:collapse;margin:.4rem 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.25rem .6rem;text-align:center}
+  th{background:#f3f4f6}
+  footer{color:var(--muted);font-size:.85rem;text-align:center;padding:1.5rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>电磁学综合练习题（进阶版）· 对答案</h1>
+  <p>点击任一小题 → 看该小题答案　·　点「全部显示答案」→ 看整套答案</p>
+</header>
+<div class="wrap">
+  <div class="toolbar">
+    <button class="btn btn-main" id="allBtn" onclick="toggleAll(this)">👁 全部显示答案</button>
+    <button class="btn btn-ghost" onclick="hideAll();document.getElementById('allBtn').textContent='👁 全部显示答案'">全部隐藏</button>
+    <span class="hint">难度定位：高考压轴 / 竞赛入门。常数 $g=10\ \text{m/s}^2$。</span>
+  </div>
+
+  <!-- ============ A 组 ============ -->
+  <h2>A 组 · 陷阱辨析题（多选）</h2>
+
+  <div class="prob">
+    <div class="prob-title">A1.</div>
+    <div class="stem">平行板电容器<b>始终连接在电压恒为 $U$ 的电源上</b>。现将两极板间距 $d$ 缓慢增大一倍，其他不变。则（多选）</div>
+    <div class="choices"><div>A. 电容 $C$ 变为原来的一半</div><div>B. 极板电荷量 $Q$ 变为原来的一半</div><div>C. 板间电场强度 $E$ 变为原来的一半</div><div>D. 板间电场强度 $E$ 保持不变</div></div>
+    <div class="quote">对比思考：若改为<b>先充电再断开电源</b>（$Q$ 不变）后增大 $d$，上述哪些答案会变？</div>
+    <div class="subq" onclick="tog(this)">显示 A1 答案</div>
+    <div class="answer"><span class="lead">答案：ABC</span>　关键：<b>始终接电源，$U$ 不变</b>。
+      <div>• $C=\dfrac{\varepsilon S}{4\pi kd}$，$d$ 加倍 → $C$ 减半（A 对）。</div>
+      <div>• $Q=CU$，$U$ 不变、$C$ 减半 → $Q$ 减半（B 对）。</div>
+      <div>• $E=\dfrac{U}{d}$，$U$ 不变、$d$ 加倍 → $E$ 减半（C 对，D 错）。</div>
+      <div>陷阱：B（电荷也减半）最易漏选。<b>对比</b>：若断电源（$Q$ 不变），场强用 $E=\dfrac{Q}{\varepsilon_0 S}$ → <b>$E$ 不变</b>，变的是 $U=Ed$ 增大。<b>接电源时 $E$ 随 $d$ 变；断电源时 $E$ 不变。</b></div>
+    </div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">A2.</div>
+    <div class="stem">带电粒子在匀强磁场中做匀速圆周运动。若<b>只</b>把速率增大为原来的 2 倍（电荷、质量、磁场不变），则（多选）</div>
+    <div class="choices"><div>A. 轨道半径变为原来的 2 倍</div><div>B. 周期变为原来的 2 倍</div><div>C. 周期保持不变</div><div>D. 每秒转的圈数（频率）保持不变</div></div>
+    <div class="subq" onclick="tog(this)">显示 A2 答案</div>
+    <div class="answer"><span class="lead">答案：ACD</span>　$r=\dfrac{mv}{qB}$、$T=\dfrac{2\pi m}{qB}$。
+      <div>• $v$ 加倍 → $r$ 加倍（A 对）。</div>
+      <div>• $T=\dfrac{2\pi m}{qB}$ <b>与 $v$ 无关</b> → 周期不变（C 对，B 错）；频率 $f=\dfrac1T$ 也不变（D 对）。</div>
+      <div>核心：<b>磁场圆周周期只由 $\dfrac{m}{qB}$ 决定，与速度无关</b>——回旋加速器的原理基础。</div>
+    </div>
+  </div>
+
+  <!-- ============ B 组 ============ -->
+  <h2>B 组 · 综合计算题</h2>
+
+  <div class="prob">
+    <div class="prob-title">B1.（电场加速 + 磁场偏转）</div>
+    <div class="stem">质量 $m$、电荷 $q$ 的正离子，从静止经电压 $U$ 加速后，从 $O$ 点<b>垂直</b>射入磁感应强度 $B$、垂直纸面向里的匀强磁场。</div>
+    <div class="subq" onclick="tog(this)">(1) 求进入磁场时的速度 $v$</div>
+    <div class="answer">动能定理：$qU=\dfrac12mv^2\Rightarrow \boxed{v=\sqrt{\dfrac{2qU}{m}}}$</div>
+    <div class="subq" onclick="tog(this)">(2) 求圆周运动半径 $r$</div>
+    <div class="answer">洛伦兹力提供向心力 $qvB=\dfrac{mv^2}{r}$：$\boxed{r=\dfrac{mv}{qB}=\dfrac{1}{B}\sqrt{\dfrac{2mU}{q}}}$</div>
+    <div class="subq" onclick="tog(this)">(3) 磁场宽度为 $L$（$L&lt;r$），求穿出时速度偏转角 $\theta$</div>
+    <div class="answer">几何关系 $\sin\theta=\dfrac{L}{r}$：$\boxed{\theta=\arcsin\dfrac{L}{r}=\arcsin\left(\dfrac{BL}{\sqrt{2mU/q}}\right)}$</div>
+    <div class="subq note-q" onclick="tog(this)">综合点</div>
+    <div class="answer note">动能定理（电场）→ 洛伦兹力圆周（磁场）→ 几何求偏角。三步跨两个领域。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B2.（带电油滴 + 电容器变压 + 功）</div>
+    <div class="stem">两水平平行板间距 $d$，<b>上板带正电</b>。质量 $m$、带电量 $q$ 的油滴恰好<b>静止</b>悬浮在两板正中间。</div>
+    <div class="subq" onclick="tog(this)">(1) 判断油滴带电正负，求电压 $U_0$</div>
+    <div class="answer">油滴静止 → 电场力向上平衡重力。上板正 → 板间电场向下 → 油滴须带<b>负电</b>。平衡 $q\dfrac{U_0}{d}=mg\Rightarrow\boxed{U_0=\dfrac{mgd}{q}}$</div>
+    <div class="subq" onclick="tog(this)">(2) 电压突增到 $2U_0$，求时间 $t$ 后的速度</div>
+    <div class="answer">电场力变 $q\dfrac{2U_0}{d}=2mg$（向上），合力 $F_合=2mg-mg=mg$（向上），$a=g$。$\boxed{v=gt\ (\text{竖直向上})}$</div>
+    <div class="subq" onclick="tog(this)">(3) 求这段时间电场力做的功 $W$</div>
+    <div class="answer">位移 $s=\dfrac12gt^2$（向上），电场力 $2mg$ 与位移同向：$\boxed{W=2mg\cdot\dfrac12gt^2=mg^2t^2}$</div>
+    <div class="subq note-q" onclick="tog(this)">综合点</div>
+    <div class="answer note">受力平衡定电荷正负 → 变压后重新受力 → 运动学求位移 → 功。层层递进。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B3.（LC 振荡的能量分析）</div>
+    <div class="stem">理想 LC 电路，电容 $C$、电感 $L$，电容器最大电荷 $Q_0$。</div>
+    <div class="subq" onclick="tog(this)">(1) 用能量守恒求最大电流 $I_0$</div>
+    <div class="answer">电荷最大时全为电场能 $\dfrac{Q_0^2}{2C}$，电流最大时全为磁场能 $\dfrac{LI_0^2}{2}$，相等：$\boxed{I_0=\dfrac{Q_0}{\sqrt{LC}}}$</div>
+    <div class="subq" onclick="tog(this)">(2) 写出振荡周期 $T$</div>
+    <div class="answer">$\boxed{T=2\pi\sqrt{LC}}$</div>
+    <div class="subq" onclick="tog(this)">(3) 当电荷为 $\dfrac{Q_0}{2}$ 时求电流 $i$</div>
+    <div class="answer">能量守恒 $\dfrac{q^2}{2C}+\dfrac{Li^2}{2}=\dfrac{Q_0^2}{2C}$，代 $q=\dfrac{Q_0}{2}$：$\dfrac{Li^2}{2}=\dfrac34\dfrac{Q_0^2}{2C}$，$\boxed{i=\dfrac{\sqrt3}{2}I_0\approx0.87I_0}$
+      <div style="margin-top:.3rem">注：能量法只给<b>大小</b>。带方向时 $i=\pm\dfrac{\sqrt3}{2}I_0$——由 $q=Q_0\cos\omega t$，$q=\dfrac{Q_0}{2}$ 对应 $\omega t=\dfrac{\pi}{3}$（放电，$i$ 为负）或 $\omega t=\dfrac{5\pi}{3}$（充电，$i$ 为正）。正负取决于此刻在放电还是充电。</div></div>
+    <div class="subq note-q" onclick="tog(this)">综合点</div>
+    <div class="answer note">电荷减半时电流<b>不是</b>最大值的一半，而是 $\dfrac{\sqrt3}{2}$ 倍——这是能量（平方关系）的非线性。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B4.（导轨导体棒 · 电磁感应压轴）</div>
+    <div class="stem">水平光滑导轨间距 $L$，竖直向下磁场 $B$，导轨电阻不计，末端接电阻 $R$。质量 $m$ 的导体棒受<b>恒定水平外力 $F$</b>，从静止开始。</div>
+    <div class="subq" onclick="tog(this)">(1) 求能达到的最大速度 $v_{max}$</div>
+    <div class="answer">感应电动势 $\varepsilon=BLv$ → 电流 $I=\dfrac{BLv}{R}$ → 安培力 $F_安=\dfrac{B^2L^2v}{R}$。最大速度时 $a=0$，$F=F_安$：$\boxed{v_{max}=\dfrac{FR}{B^2L^2}}$</div>
+    <div class="subq" onclick="tog(this)">(2) 当 $v=\dfrac{v_{max}}{2}$ 时求加速度 $a$</div>
+    <div class="answer">此时 $F_安=\dfrac12F$，合力 $\dfrac12F$：$\boxed{a=\dfrac{F}{2m}}$</div>
+    <div class="subq" onclick="tog(this)">(3) 位移 $s$、速度达 $v$（$v&lt;v_{max}$）时，求电阻焦耳热 $Q_R$</div>
+    <div class="answer">能量守恒（导轨光滑、棒无电阻）：$Fs=\dfrac12mv^2+Q_R$，$\boxed{Q_R=Fs-\dfrac12mv^2}$。（$s,v$ 取同一时刻真实值，对任意 $v&lt;v_{max}$ 精确成立。）</div>
+    <div class="subq note-q" onclick="tog(this)">综合点</div>
+    <div class="answer note">感应电动势→电流→安培力→动力学（求 $v_{max}$、$a$）→能量守恒（求热）。电磁感应压轴的标准结构。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B5.（导体棒 + 电容器 · 巧题）</div>
+    <div class="stem">把 B4 末端电阻换成电容 $C$ 的电容器（导轨、棒电阻均不计），其余相同，从静止开始。</div>
+    <div class="subq" onclick="tog(this)">(1) 定性说明导体棒做什么运动</div>
+    <div class="answer">做<b>匀加速</b>直线运动。</div>
+    <div class="subq" onclick="tog(this)">(2) 求加速度 $a$</div>
+    <div class="answer">电容器电压 = 感应电动势 $U_C=BLv$，电荷 $q=CBLv$，充电电流 $I=\dfrac{\Delta q}{\Delta t}=CBLa$。安培力 $F_安=BIL=CB^2L^2a$。牛顿第二定律 $F-CB^2L^2a=ma$：$\boxed{a=\dfrac{F}{m+CB^2L^2}}$（常数 → 匀加速）</div>
+    <div class="subq note-q" onclick="tog(this)">综合点</div>
+    <div class="answer note">与 B4 对比：接<b>电阻</b>时安培力 $\propto v$ → 变加速、趋于最大速度；接<b>电容</b>时安培力 $\propto a$ → 加速度恒定、匀加速。同一装置换元件，运动性质完全不同。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B6.（有界磁场中的几何 · 挑战）</div>
+    <div class="stem">质量 $m$、电荷 $q$ 的正电荷，以速度 $v$ <b>垂直于左边界</b>射入宽度 $d$ 的匀强磁场（垂直纸面向里）。</div>
+    <div class="subq" onclick="tog(this)">(1) 若粒子恰好从右边界射出，求 $B$</div>
+    <div class="answer">半径 $r=\dfrac{mv}{qB}$，最大水平穿透深度 $=r$。"恰好射出右边界"临界为 $r=d$：$\boxed{B=\dfrac{mv}{qd}}$</div>
+    <div class="subq" onclick="tog(this)">(2) 临界情况下求在磁场中的时间 $t$</div>
+    <div class="answer">$r=d$ 时恰好转过 $90^\circ$（四分之一周期）：$t=\dfrac{T}{4}=\dfrac{\pi m}{2qB}$，代入 $B$：$\boxed{t=\dfrac{\pi d}{2v}}$（与 $m,q,B$ 无关）</div>
+    <div class="subq note-q" onclick="tog(this)">综合点</div>
+    <div class="answer note">洛伦兹力圆周 + 临界条件（$r=d$）+ 几何（转 $90^\circ$）+ 周期公式。</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B6拓展.（有界磁场 + 重力 · 超纲挑战）</div>
+    <div class="stem">题干同 B6，但<b>不忽略重力</b>（竖直向下，垂直入射速度），且<b>已知 $B$、不给定 $d$</b>。粒子恰好从右边界射出（相切）。求 $d$ 和 $t$。提示：轨迹是摆线，$v_{漂}=\dfrac{mg}{qB}$，相切条件 $v_x=0$。</div>
+    <div class="subq" onclick="tog(this)">(1) 求磁场区宽度 $d$</div>
+    <div class="answer">$d=x(t^{*})$，代入 $v_{漂}=\dfrac{mg}{qB}$ 化简：$$\boxed{d=\dfrac{m}{q^{2}B^{2}}\left[mg\arccos\!\left(\dfrac{-mg}{qBv-mg}\right)+\sqrt{qBv(qBv-2mg)}\right]}$$</div>
+    <div class="subq" onclick="tog(this)">(2) 求从射入到到达右边界的时间 $t$</div>
+    <div class="answer">相切条件 $\cos\omega t^{*}=-\dfrac{mg}{qBv-mg}$（$\omega=\dfrac{qB}{m}$）：$$\boxed{t=\dfrac{m}{qB}\arccos\!\left(\dfrac{-mg}{qBv-mg}\right)}$$</div>
+    <div class="subq note-q" onclick="tog(this)">综合点</div>
+    <div class="answer note">重力使圆变<b>摆线</b>；相切 $v_x=0$ 定出 $t$，再代入得 $d$。令 $g\to0$ 退回 B6 的 $t=\dfrac T4$、$d=r$。给 $B$ 求 $d$ 是正向显式；给 $d$ 求 $B$ 是超越方程——正逆不对称。</div>
+  </div>
+
+</div>
+<footer>点击小题看答案　·　「全部显示答案」一次展开全部　·　公式渲染 MathJax</footer>
+<script>
+function tog(el){
+  el.classList.toggle('open');
+  const a=el.nextElementSibling;
+  if(a&&a.classList.contains('answer')) a.classList.toggle('show');
+}
+function hideAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.remove('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.remove('open'));
+}
+function showAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.add('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.add('open'));
+}
+function toggleAll(btn){
+  const anyHidden=[...document.querySelectorAll('.answer')].some(a=>!a.classList.contains('show'));
+  if(anyHidden){showAll();btn.textContent='🙈 全部隐藏答案';}
+  else{hideAll();btn.textContent='👁 全部显示答案';}
+}
+</script>
+</body>
+</html>
