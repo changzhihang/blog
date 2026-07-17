@@ -9,7 +9,7 @@ theme = 'PaperMod'
 
 [params]
   # Text shown on the homepage
-  description = "Zhihang's new blog"
+  description = "个人学习笔记与随想"
   # Show reading time on posts
   ShowReadingTime = true
   # Show a table of contents on posts
