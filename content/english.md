@@ -16,7 +16,7 @@ title = '英语学习'
 - 🗂️ **当季 60 个话题、318 个问题**：按人物 / 事物 / 事件 / 地点 / 其他五大板块归档。
 - 三层点击展开：**选板块 → 点话题看它的所有问题 → 点问题看参考答案**（含关键词 / 高分表达）。
 
-👉 **[打开：雅思口语 Part 1 题库 + 新手指南](https://changzhihang.github.io/blog/ielts/speaking-part1.html)**
+👉 **[打开：雅思口语 Part 1 题库 + 新手指南](/ielts/speaking-part1.html)**
 
 ---
 

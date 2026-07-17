@@ -12,7 +12,7 @@ title = '物理习题'
 
 多步骤、跨知识点综合题，接近高考压轴 / 竞赛入门。涵盖平行板电容器、带电粒子在电磁场中的运动、LC 振荡、电磁感应（导轨模型）、有界磁场几何等，含一道"磁场 + 重力"的超纲挑战。
 
-👉 **[打开：电磁学综合练习题 · 对答案](https://changzhihang.github.io/blog/physics/em-comprehensive.html)**
+👉 **[打开：电磁学综合练习题 · 对答案](/physics/em-comprehensive.html)**
 
 ---
 
@@ -20,7 +20,7 @@ title = '物理习题'
 
 比上一套再难一档，专攻**电场、磁场里各物理量之间的关系与相互制约**（谁决定谁、谁被钳制、谁成正/反比），引入速度选择器、质谱仪、回旋加速器等经典仪器。
 
-👉 **[打开：电磁学关系强化练习 · 对答案](https://changzhihang.github.io/blog/physics/em-relations.html)**
+👉 **[打开：电磁学关系强化练习 · 对答案](/physics/em-relations.html)**
 
 ---
 

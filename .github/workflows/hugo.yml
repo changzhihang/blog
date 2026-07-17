@@ -17,8 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.164.0
-      # Cloudflare Pages project name; the site will be served at <project>.pages.dev
+      # Cloudflare Pages project name (the deploy target)
       CF_PROJECT: blogofbrian
+      # Public site URL; used as Hugo baseURL so all links point to the custom domain
+      SITE_URL: https://changzh.me/
     steps:
       - name: Install Hugo CLI
         run: |
@@ -39,7 +41,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://${CF_PROJECT}.pages.dev/"
+            --baseURL "${SITE_URL}"
 
       # Create the Pages project on first run; ignore the error if it already exists
       - name: Ensure Cloudflare Pages project exists

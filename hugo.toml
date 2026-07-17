@@ -1,4 +1,4 @@
-baseURL = 'https://changzhihang.github.io/blog/'
+baseURL = 'https://changzh.me/'
 locale = 'zh-cn'
 title = 'Blog of Brian'
 theme = 'PaperMod'
