@@ -8,4 +8,4 @@ tags = ['Test']
 
 This is the first post in this blog.
 
-Written by the creator.
+Written by the creator, Brian Chang.
