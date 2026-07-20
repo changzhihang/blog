@@ -76,9 +76,9 @@ var backBtn=document.getElementById('backBtn'),hTitle=document.getElementById('h
 
 function renderHome(){
   var h='<div class="cardlink guide" data-guide="1"><span class="em">📖</span>'+
-    '<span><span class="t">Beginner's Guide · IELTS Speaking</span><br><span class="d">Key tips for Parts 1/2/3 · 4-week practice plan</span></span>'+
+    '<span><span class="t">Beginner\'s Guide · IELTS Speaking</span><br><span class="d">Key tips for Parts 1/2/3 · 4-week practice plan</span></span>'+
     '<span class="go">→</span></div>';
-  h+='<div class="note">💡 Tip: read the Beginner's Guide first, then browse the topics. Click a topic to see its questions; click a question to see the sample answer.</div>';
+  h+='<div class="note">💡 Tip: read the Beginner\'s Guide first, then browse the topics. Click a topic to see its questions; click a question to see the sample answer.</div>';
   DATA.forEach(function(c,i){
     h+='<div class="cardlink" data-cat="'+i+'"><span class="em">'+c.emoji+'</span>'+
        '<span><span class="t">'+c.cn+' '+c.en+'</span><br><span class="d">'+c.topics.length+' topics · '+c.qn+' questions</span></span>'+
