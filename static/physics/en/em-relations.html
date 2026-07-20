@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetism: Physical-Quantity Relationships &mdash; Answer Key</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  :root{--bg:#f6f7fb;--card:#fff;--ink:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#7c3aed;--ans:#16a34a;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  header{background:linear-gradient(135deg,#5b21b6,#7c3aed);color:#fff;padding:1.8rem 1.2rem;text-align:center;}
+  header h1{margin:.2rem 0;font-size:1.5rem}
+  header p{margin:.3rem 0;opacity:.9;font-size:.9rem}
+  .wrap{max-width:860px;margin:0 auto;padding:1rem 1.1rem 4rem;}
+  .toolbar{position:sticky;top:0;z-index:10;background:var(--bg);padding:.7rem 0;margin-bottom:.5rem;
+    border-bottom:1px solid var(--line);display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;}
+  .btn{cursor:pointer;border:none;border-radius:20px;padding:.5rem 1.1rem;font-size:.92rem;font-weight:600;}
+  .btn-main{background:var(--accent);color:#fff;}
+  .btn-ghost{background:#f3eefc;color:var(--accent);border:1px solid var(--line);}
+  .hint{color:var(--muted);font-size:.85rem}
+  .prob{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin:.9rem 0;}
+  .prob-title{font-weight:700;color:var(--accent);font-size:1.05rem;margin-bottom:.3rem}
+  .stem{margin:.2rem 0 .6rem}
+  .choices{margin:.2rem 0 .4rem;padding-left:.2rem}
+  .choices div{margin:.15rem 0}
+  .quote{border-left:3px solid var(--line);padding:.3rem .7rem;color:var(--muted);font-size:.9rem;background:#fafafa;border-radius:0 8px 8px 0;margin:.5rem 0}
+  .subq{cursor:pointer;padding:.4rem .6rem;border-radius:8px;margin:.35rem 0;border:1px dashed var(--line);
+    background:#fcfbff;transition:background .15s;position:relative;}
+  .subq:hover{background:#f4eefe}
+  .subq::after{content:"&#9658; Show answer";float:right;color:var(--accent);font-size:.8rem;opacity:.75}
+  .subq.open::after{content:"&#9660; Collapse"}
+  .subq.note-q{background:#fffdf5;border-color:#fde9c8}
+  .subq.note-q::after{content:"&#128161; Show key points"}
+  .subq.note-q.open::after{content:"&#9660; Collapse"}
+  .answer{display:none;margin:.1rem 0 .5rem;padding:.6rem .9rem;border-left:4px solid var(--ans);
+    background:#f0fdf4;border-radius:0 8px 8px 0;}
+  .answer.show{display:block}
+  .answer .lead{font-weight:700;color:var(--ans)}
+  .answer.note{border-left-color:#eab308;background:#fffbeb}
+  table{border-collapse:collapse;margin:.4rem 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.25rem .6rem;text-align:center}
+  th{background:#f3f4f6}
+  footer{color:var(--muted);font-size:.85rem;text-align:center;padding:1.5rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Electromagnetism &middot; Physical-Quantity Relationships &middot; Answer Key</h1>
+  <p>Click any sub-question to reveal its answer &nbsp;&middot;&nbsp; Click &ldquo;Show all answers&rdquo; to reveal the full set</p>
+</header>
+<div class="wrap">
+  <div class="toolbar">
+    <a class="btn btn-ghost" href="/exercises/">&larr; Back to exercises</a>
+    <button class="btn btn-main" id="allBtn" onclick="toggleAll(this)">&#128065; Show all answers</button>
+    <button class="btn btn-ghost" onclick="hideAll();document.getElementById('allBtn').textContent='&#128065; Show all answers'">Hide all</button>
+    <span class="hint">Goal: master the relationships and constraints among physical quantities in E&amp;M fields.</span>
+  </div>
+
+  <!-- ============ Section A ============ -->
+  <h2>Section A &middot; Relationship Analysis (Multiple Choice)</h2>
+
+  <div class="prob">
+    <div class="prob-title">A1.</div>
+    <div class="stem">A parallel-plate capacitor is charged and then <b>disconnected from the power supply</b> (charge $Q$ is fixed). The plate separation $d$ is then doubled while everything else remains unchanged. Which of the following are correct? (Multiple choice)</div>
+    <div class="choices">
+      <div>A. The capacitance $C$ becomes half its original value.</div>
+      <div>B. The electric field strength $E$ between the plates remains unchanged.</div>
+      <div>C. The voltage $U$ across the plates doubles.</div>
+      <div>D. The energy stored in the capacitor becomes half its original value.</div>
+    </div>
+    <div class="quote">Comparison: if the capacitor <b>stays connected to the power supply</b> ($U$ fixed) while $d$ is doubled, which answers would differ?</div>
+    <div class="subq" onclick="tog(this)">Show answer for A1</div>
+    <div class="answer"><span class="lead">Answer: ABC</span>&nbsp;&nbsp;<b>Disconnected supply &rarr; charge $Q$ is clamped.</b>
+      <div>&bull; A correct: $C=\dfrac{\varepsilon S}{4\pi kd}$, $d$ doubles &rarr; $C$ halves.</div>
+      <div>&bull; B correct: $E=\dfrac{\sigma}{\varepsilon_0}=\dfrac{Q}{\varepsilon_0 S}$; since $Q$ and $S$ are fixed, <b>$E$ is independent of $d$</b> and does not change.</div>
+      <div>&bull; C correct: $U=Ed$; $E$ unchanged, $d$ doubles &rarr; $U$ doubles.</div>
+      <div>&bull; <b>D incorrect</b>: $W=\dfrac{Q^2}{2C}$; $C$ halves &rarr; $W$ <b>doubles</b>. The extra energy comes from the work done by the external force separating the plates.</div>
+      <div>Comparison: with supply connected ($U$ fixed), $E=\dfrac{U}{d}$ <b>halves</b>, $Q$ halves, $W$ halves. <b>Disconnected: clamp $\sigma$; connected: clamp $U$.</b></div>
+    </div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">A2.</div>
+    <div class="stem">A charged particle moves in uniform circular motion inside a uniform magnetic field. If <b>only</b> the speed is doubled (charge, mass, and field strength unchanged), which of the following are correct? (Multiple choice)</div>
+    <div class="choices">
+      <div>A. The orbital radius doubles.</div>
+      <div>B. The period doubles.</div>
+      <div>C. The kinetic energy becomes 4 times its original value.</div>
+      <div>D. The number of revolutions per second (frequency) is unchanged.</div>
+    </div>
+    <div class="subq" onclick="tog(this)">Show answer for A2</div>
+    <div class="answer"><span class="lead">Answer: ACD</span>&nbsp;&nbsp;$r=\dfrac{mv}{qB}$,&nbsp;$T=\dfrac{2\pi m}{qB}$.
+      <div>&bull; A correct: $r\propto v$ &rarr; radius doubles.</div>
+      <div>&bull; <b>B incorrect</b> / D correct: $T$ and $f$ are <b>independent of $v$</b> &rarr; both unchanged.</div>
+      <div>&bull; C correct: $E_k=\dfrac{1}{2}mv^2\propto v^2$ &rarr; 4 times.</div>
+    </div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">A3.</div>
+    <div class="stem">Mutually perpendicular uniform electric field $E$ and magnetic field $B$ form a <b>velocity selector</b>. A charged particle enters perpendicularly and travels in a straight line at constant velocity. Which of the following are correct? (Multiple choice)</div>
+    <div class="choices">
+      <div>A. The selected speed is $v=\dfrac{E}{B}$, independent of both charge and mass.</div>
+      <div>B. If $E$ is doubled, the selected speed doubles.</div>
+      <div>C. If $B$ is doubled, the selected speed is halved.</div>
+      <div>D. A particle with speed greater than $\dfrac{E}{B}$ experiences a net force in the same direction as the electric force.</div>
+    </div>
+    <div class="subq" onclick="tog(this)">Show answer for A3</div>
+    <div class="answer"><span class="lead">Answer: ABC</span>&nbsp;&nbsp;Equilibrium: $qE=qvB\Rightarrow v=\dfrac{E}{B}$.
+      <div>&bull; A correct: $q$ cancels and $m$ does not appear &rarr; selects speed only, regardless of particle type.</div>
+      <div>&bull; B correct: $v\propto E$ &rarr; doubles; C correct: $v\propto\dfrac{1}{B}$ &rarr; halves.</div>
+      <div>&bull; <b>D incorrect</b>: when $v&gt;\dfrac{E}{B}$, the magnetic force $qvB&gt;qE$, so the <b>net force is in the direction of the magnetic force</b>, which is <b>opposite</b> to the electric force.</div>
+    </div>
+  </div>
+
+  <!-- ============ Section B ============ -->
+  <h2>Section B &middot; Quantitative Relationship Problems</h2>
+
+  <div class="prob">
+    <div class="prob-title">B1. (Electric acceleration + circular motion in magnetic field &middot; charge-to-mass ratio)</div>
+    <div class="stem">A positive particle of mass $m$ and charge $q$ starts from rest, is accelerated through voltage $U$, and enters a magnetic field $B$ perpendicularly, following a circular arc of radius $r$.</div>
+    <div class="subq" onclick="tog(this)">(1) Prove that the specific charge is $\dfrac{q}{m}=\dfrac{2U}{B^2r^2}$</div>
+    <div class="answer">Acceleration: $qU=\dfrac{1}{2}mv^2$. Circular motion: $r=\dfrac{mv}{qB}$, so $v=\dfrac{qBr}{m}$. Substituting: $qU=\dfrac{q^2B^2r^2}{2m}\Rightarrow\boxed{\dfrac{q}{m}=\dfrac{2U}{B^2r^2}}$</div>
+    <div class="subq" onclick="tog(this)">(2) $U$ is doubled (same particle, same $B$). How does $r$ change?</div>
+    <div class="answer">$r^2\propto U$ &rarr; $r\propto\sqrt{U}$. Doubling $U$ gives $r\to\boxed{\sqrt{2}}$ times the original.</div>
+    <div class="subq" onclick="tog(this)">(3) A different particle with charge $2q$ and mass $4m$ is used (same $U$, same $B$). By what factor does $r$ change?</div>
+    <div class="answer">$r\propto\sqrt{\dfrac{m}{q}}$:&nbsp;$\dfrac{r'}{r}=\sqrt{\dfrac{4m/2q}{m/q}}=\boxed{\sqrt{2}}$ times.</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Acceleration fixes $v$ &rarr; circular motion fixes $r$ &rarr; eliminate $v$. Core results: $r\propto\sqrt{U}$ and $r\propto\sqrt{m/q}$.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B2. (Parallel-plate capacitor &middot; Full comparison: constant $U$ vs. constant $Q$)</div>
+    <div class="stem">A parallel-plate capacitor with plate area $S$ and separation $d$ is charged to voltage $U_0$. The separation is then doubled. <b>Case 1:</b> the supply remains connected ($U$ fixed); <b>Case 2:</b> the supply is disconnected first ($Q$ fixed). Find how $C$, $Q$, $U$, $E$, and $W$ each change, and explain why $E$ behaves differently in the two cases.</div>
+    <div class="subq" onclick="tog(this)">Show comparison table and explanation</div>
+    <div class="answer">$C=\dfrac{\varepsilon S}{4\pi kd}$; in both cases $C$ <b>halves</b>.
+      <table>
+        <tr><th>Quantity</th><th>Case 1 ($U$ fixed)</th><th>Case 2 ($Q$ fixed)</th></tr>
+        <tr><td>$C$</td><td>halves</td><td>halves</td></tr>
+        <tr><td>$Q$</td><td>halves</td><td>unchanged</td></tr>
+        <tr><td>$U$</td><td>unchanged</td><td>doubles</td></tr>
+        <tr><td>$E$</td><td>$\dfrac{U}{d}$ &rarr; halves</td><td>$\dfrac{\sigma}{\varepsilon_0}$ &rarr; unchanged</td></tr>
+        <tr><td>$W$</td><td>halves</td><td>doubles</td></tr>
+      </table>
+      <div><b>Why $E$ differs:</b> In Case 1 the voltage is clamped, so $E=\dfrac{U}{d}$ decreases as $d$ grows. In Case 2 the surface charge density $\sigma$ is clamped, so $E=\dfrac{\sigma}{\varepsilon_0}$ is independent of $d$.</div>
+    </div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Identify which quantity is clamped first, then choose the corresponding field-strength formula; everything else follows in sequence.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B3. (Velocity selector + mass spectrometer &middot; relationship chain)</div>
+    <div class="stem">A beam of particles (all with charge $q$) first passes through a velocity selector (crossed fields $E$ and $B_1$) to select speed $v$, then enters a region with only magnetic field $B_2$ and traces a semicircle before hitting a photographic plate.</div>
+    <div class="subq" onclick="tog(this)">(1) Find the selected speed $v$</div>
+    <div class="answer">$\boxed{v=\dfrac{E}{B_1}}$</div>
+    <div class="subq" onclick="tog(this)">(2) Find the radius $r$ of the semicircle in $B_2$</div>
+    <div class="answer">$r=\dfrac{mv}{qB_2}=\boxed{\dfrac{mE}{qB_1B_2}}$</div>
+    <div class="subq" onclick="tog(this)">(3) Two isotopes have masses $m_1$ and $m_2$. Find the separation $\Delta x$ between their impact points.</div>
+    <div class="answer">The impact point is a full diameter $2r$ from the entry slit: $\boxed{\Delta x=|2r_1-2r_2|=\dfrac{2E}{qB_1B_2}|m_1-m_2|}$</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">The selector fixes speed (independent of mass) &rarr; radius $r\propto m$ &rarr; different masses produce different impact points. This is how a mass spectrometer separates isotopes.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B4. (Conducting rail &middot; compound proportionality + power)</div>
+    <div class="stem">A horizontal frictionless rail has track width $L$, a vertical magnetic field $B$, and a terminal resistor $R$. A bar of mass $m$ is pushed from rest by a constant force $F$ and asymptotically approaches a maximum speed.</div>
+    <div class="subq" onclick="tog(this)">(1) Find the maximum speed $v_{\max}$</div>
+    <div class="answer">At $a=0$: $F=\dfrac{B^2L^2v_{\max}}{R}$, so $\boxed{v_{\max}=\dfrac{FR}{B^2L^2}}$.</div>
+    <div class="subq" onclick="tog(this)">(2) $B$ is doubled. By what factor does $v_{\max}$ change?</div>
+    <div class="answer">$v_{\max}\propto\dfrac{1}{B^2}$ &rarr; becomes $\boxed{\dfrac{1}{4}}$ of the original.</div>
+    <div class="subq" onclick="tog(this)">(3) Both $R$ and $B$ are doubled simultaneously. By what factor does $v_{\max}$ change?</div>
+    <div class="answer">$v_{\max}\propto\dfrac{R}{B^2}$; $R\times2$, $B^2\times4$ &rarr; $\boxed{\dfrac{1}{2}}$ of the original.</div>
+    <div class="subq" onclick="tog(this)">(4) Find $i_{\max}$ and power $P$; verify that $P=Fv_{\max}$</div>
+    <div class="answer">$i_{\max}=\dfrac{BLv_{\max}}{R}=\dfrac{F}{BL}$;&nbsp; $P=i_{\max}^2R=\dfrac{F^2R}{B^2L^2}$. Verification: $Fv_{\max}=\dfrac{F^2R}{B^2L^2}$ &check; (at constant velocity the applied force power equals the Joule dissipation).</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">$v_{\max}\propto R/B^2$ is a compound proportionality; $P=Fv_{\max}$ expresses the equivalence of mechanical input power and electrical output power.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B5. (LC oscillation &middot; quantity relationships and scaling)</div>
+    <div class="stem">An ideal LC circuit has inductance $L$, capacitance $C$, and maximum charge $Q_0$.</div>
+    <div class="subq" onclick="tog(this)">(1) Write expressions for the maximum current $I_0$ and maximum voltage $U_0$</div>
+    <div class="answer">$\boxed{I_0=\dfrac{Q_0}{\sqrt{LC}},\quad U_0=\dfrac{Q_0}{C}}$</div>
+    <div class="subq" onclick="tog(this)">(2) $Q_0$ is unchanged and $C\to4C$. By what factor do $I_0$, $U_0$, and $T$ each change?</div>
+    <div class="answer">$I_0\propto\dfrac{1}{\sqrt{C}}$ &rarr; $\dfrac{1}{2}$;&nbsp; $U_0\propto\dfrac{1}{C}$ &rarr; $\dfrac{1}{4}$;&nbsp; $T=2\pi\sqrt{LC}\propto\sqrt{C}$ &rarr; $2$ times.</div>
+    <div class="subq" onclick="tog(this)">(3) When the charge equals $\dfrac{Q_0}{2}$, what is the current?</div>
+    <div class="answer">$i=I_0\sqrt{1-\left(\dfrac{q}{Q_0}\right)^2}=I_0\sqrt{1-\dfrac{1}{4}}=\boxed{\dfrac{\sqrt{3}}{2}I_0}$</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">$I_0\propto1/\sqrt{C}$, $U_0\propto1/C$, $T\propto\sqrt{C}$ &mdash; a single change in $C$ drives three quantities at different power laws. The $q$&ndash;$i$ relation is quadratic (nonlinear).</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B6. (Cyclotron &middot; relationship challenge)</div>
+    <div class="stem">A cyclotron accelerates particles of charge $q$ and mass $m$ in a magnetic field $B$. The maximum orbital radius is $R$.</div>
+    <div class="subq" onclick="tog(this)">(1) Find the period $T$ and frequency $f$; explain why they are independent of speed and radius</div>
+    <div class="answer">$\boxed{T=\dfrac{2\pi m}{qB},\quad f=\dfrac{qB}{2\pi m}}$. Because $r=\dfrac{mv}{qB}$ grows in proportion to $v$, the time per revolution $T=\dfrac{2\pi r}{v}=\dfrac{2\pi m}{qB}$ remains constant &mdash; a faster particle traces a proportionally larger circle in exactly the same time. This isochronous property is what allows a fixed-frequency alternating voltage to keep accelerating the particles.</div>
+    <div class="subq" onclick="tog(this)">(2) Find the maximum kinetic energy $E_k$</div>
+    <div class="answer">At maximum radius: $v_{\max}=\dfrac{qBR}{m}$, so $E_k=\dfrac{1}{2}mv_{\max}^2=\boxed{\dfrac{q^2B^2R^2}{2m}}$.</div>
+    <div class="subq" onclick="tog(this)">(3) $B$ is doubled, then (separately) the mass is doubled with $q$ unchanged. By what factor does $E_k$ change in each case?</div>
+    <div class="answer">$B$ doubled: $E_k\propto B^2$ &rarr; $\boxed{4}$ times;&nbsp; mass doubled: $E_k\propto\dfrac{1}{m}$ &rarr; $\boxed{\dfrac{1}{2}}$.</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Period independent of $v$ (enabling fixed-frequency acceleration) &rarr; maximum energy $\propto B^2R^2/m$; the field strength and machine size set the energy ceiling.</div>
+  </div>
+
+</div>
+<footer>Click a sub-question to reveal its answer &nbsp;&middot;&nbsp; &ldquo;Show all answers&rdquo; expands everything at once &nbsp;&middot;&nbsp; Equations rendered by MathJax</footer>
+<script>
+function tog(el){
+  el.classList.toggle('open');
+  const a=el.nextElementSibling;
+  if(a&&a.classList.contains('answer')) a.classList.toggle('show');
+}
+function hideAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.remove('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.remove('open'));
+}
+function showAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.add('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.add('open'));
+}
+function toggleAll(btn){
+  const anyHidden=[...document.querySelectorAll('.answer')].some(a=>!a.classList.contains('show'));
+  if(anyHidden){showAll();btn.textContent='🙈 Hide all answers';}
+  else{hideAll();btn.textContent='👁 Show all answers';}
+}
+</script>
+</body>
+</html>

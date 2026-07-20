@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetism Comprehensive Exercises &middot; Answer Key</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+  :root{--bg:#f6f7fb;--card:#fff;--ink:#1f2430;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--ans:#16a34a;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+  header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:1.8rem 1.2rem;text-align:center;}
+  header h1{margin:.2rem 0;font-size:1.5rem}
+  header p{margin:.3rem 0;opacity:.9;font-size:.9rem}
+  .wrap{max-width:860px;margin:0 auto;padding:1rem 1.1rem 4rem;}
+  .toolbar{position:sticky;top:0;z-index:10;background:var(--bg);padding:.7rem 0;margin-bottom:.5rem;
+    border-bottom:1px solid var(--line);display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;}
+  .btn{cursor:pointer;border:none;border-radius:20px;padding:.5rem 1.1rem;font-size:.92rem;font-weight:600;}
+  .btn-main{background:var(--accent);color:#fff;}
+  .btn-ghost{background:#eef2ff;color:var(--accent);border:1px solid var(--line);}
+  .hint{color:var(--muted);font-size:.85rem}
+  .prob{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin:.9rem 0;}
+  .prob-title{font-weight:700;color:var(--accent);font-size:1.05rem;margin-bottom:.3rem}
+  .stem{margin:.2rem 0 .6rem}
+  .choices{margin:.2rem 0 .4rem;padding-left:.2rem}
+  .choices div{margin:.15rem 0}
+  .quote{border-left:3px solid var(--line);padding:.3rem .7rem;color:var(--muted);font-size:.9rem;background:#fafafa;border-radius:0 8px 8px 0;margin:.5rem 0}
+  .subq{cursor:pointer;padding:.4rem .6rem;border-radius:8px;margin:.35rem 0;border:1px dashed var(--line);
+    background:#fbfcff;transition:background .15s;position:relative;}
+  .subq:hover{background:#eef4ff}
+  .subq::after{content:"Show answer";float:right;color:var(--accent);font-size:.8rem;opacity:.75}
+  .subq.open::after{content:"Hide"}
+  .subq.note-q{background:#fffdf5;border-color:#fde9c8}
+  .subq.note-q::after{content:"Show comments"}
+  .subq.note-q.open::after{content:"Hide"}
+  .answer{display:none;margin:.1rem 0 .5rem;padding:.6rem .9rem;border-left:4px solid var(--ans);
+    background:#f0fdf4;border-radius:0 8px 8px 0;}
+  .answer.show{display:block}
+  .answer .lead{font-weight:700;color:var(--ans)}
+  .answer.note{border-left-color:#eab308;background:#fffbeb}
+  table{border-collapse:collapse;margin:.4rem 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:.25rem .6rem;text-align:center}
+  th{background:#f3f4f6}
+  footer{color:var(--muted);font-size:.85rem;text-align:center;padding:1.5rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Electromagnetism Comprehensive Exercises (Advanced) &middot; Answer Key</h1>
+  <p>Click any sub-question to reveal its answer &nbsp;&middot;&nbsp; Click "Show All Answers" to expand every answer at once</p>
+</header>
+<div class="wrap">
+  <div class="toolbar">
+    <a class="btn btn-ghost" href="/exercises/">&larr; Back to Physics Exercises</a>
+    <button class="btn btn-main" id="allBtn" onclick="toggleAll(this)">&#128065; Show All Answers</button>
+    <button class="btn btn-ghost" onclick="hideAll();document.getElementById('allBtn').textContent='&#128065; Show All Answers'">Hide All</button>
+    <span class="hint">Difficulty: Advanced college-entrance / introductory competition level. Constant $g=10\ \text{m/s}^2$.</span>
+  </div>
+
+  <!-- ============ Section A ============ -->
+  <h2>Section A &middot; Conceptual Trap Questions (Multiple Choice)</h2>
+
+  <div class="prob">
+    <div class="prob-title">A1.</div>
+    <div class="stem">A parallel-plate capacitor remains <b>permanently connected to a source of constant voltage $U$</b>. The plate separation $d$ is slowly doubled while everything else stays the same. Which of the following are correct? (Select all that apply.)</div>
+    <div class="choices"><div>A. The capacitance $C$ is halved.</div><div>B. The charge on the plates $Q$ is halved.</div><div>C. The electric field strength $E$ between the plates is halved.</div><div>D. The electric field strength $E$ between the plates is unchanged.</div></div>
+    <div class="quote">Comparison: If the capacitor is instead <b>charged then disconnected from the source</b> ($Q$ fixed) before $d$ is doubled, which answers would change?</div>
+    <div class="subq" onclick="tog(this)">Show answer for A1</div>
+    <div class="answer"><span class="lead">Answer: ABC</span>&nbsp;&nbsp;Key point: <b>voltage $U$ is held constant by the source.</b>
+      <div>&bull; $C=\dfrac{\varepsilon S}{4\pi kd}$, so doubling $d$ halves $C$ (A correct).</div>
+      <div>&bull; $Q=CU$; $U$ unchanged and $C$ halved, so $Q$ is halved (B correct).</div>
+      <div>&bull; $E=\dfrac{U}{d}$; $U$ unchanged and $d$ doubled, so $E$ is halved (C correct, D wrong).</div>
+      <div><b>Common trap:</b> option B (charge also halves) is most often missed. <b>Contrast:</b> with the source disconnected ($Q$ fixed), use $E=\dfrac{Q}{\varepsilon_0 S}$ &rarr; <b>$E$ unchanged</b>, while $U=Ed$ increases. <b>Connected source: $E$ changes with $d$; disconnected source: $E$ unchanged.</b></div>
+    </div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">A2.</div>
+    <div class="stem">A charged particle moves in uniform circular motion inside a uniform magnetic field. If <b>only</b> its speed is doubled (charge, mass, and magnetic field unchanged), which of the following are correct? (Select all that apply.)</div>
+    <div class="choices"><div>A. The orbital radius doubles.</div><div>B. The period doubles.</div><div>C. The period is unchanged.</div><div>D. The frequency (revolutions per second) is unchanged.</div></div>
+    <div class="subq" onclick="tog(this)">Show answer for A2</div>
+    <div class="answer"><span class="lead">Answer: ACD</span>&nbsp;&nbsp;Using $r=\dfrac{mv}{qB}$ and $T=\dfrac{2\pi m}{qB}$:
+      <div>&bull; Doubling $v$ doubles $r$ (A correct).</div>
+      <div>&bull; $T=\dfrac{2\pi m}{qB}$ <b>is independent of $v$</b>, so the period is unchanged (C correct, B wrong); frequency $f=\dfrac{1}{T}$ is also unchanged (D correct).</div>
+      <div><b>Core idea:</b> the cyclotron period depends only on $\dfrac{m}{qB}$, not on speed &mdash; this is the operating principle of the cyclotron.</div>
+    </div>
+  </div>
+
+  <!-- ============ Section B ============ -->
+  <h2>Section B &middot; Comprehensive Calculation Problems</h2>
+
+  <div class="prob">
+    <div class="prob-title">B1. (Electric-field acceleration + magnetic-field deflection)</div>
+    <div class="stem">A positive ion of mass $m$ and charge $q$ starts from rest, is accelerated through voltage $U$, and then enters a uniform magnetic field of magnitude $B$ (directed into the page) <b>perpendicularly</b> at point $O$.</div>
+    <div class="subq" onclick="tog(this)">(1) Find the speed $v$ upon entering the magnetic field.</div>
+    <div class="answer">Work-energy theorem: $qU=\dfrac{1}{2}mv^2\Rightarrow \boxed{v=\sqrt{\dfrac{2qU}{m}}}$</div>
+    <div class="subq" onclick="tog(this)">(2) Find the radius $r$ of circular motion.</div>
+    <div class="answer">Lorentz force provides centripetal force: $qvB=\dfrac{mv^2}{r}$, so $\boxed{r=\dfrac{mv}{qB}=\dfrac{1}{B}\sqrt{\dfrac{2mU}{q}}}$</div>
+    <div class="subq" onclick="tog(this)">(3) The magnetic field has width $L$ ($L&lt;r$). Find the deflection angle $\theta$ of the velocity upon exit.</div>
+    <div class="answer">Geometry gives $\sin\theta=\dfrac{L}{r}$, so $\boxed{\theta=\arcsin\dfrac{L}{r}=\arcsin\!\left(\dfrac{BL}{\sqrt{2mU/q}}\right)}$</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Work-energy theorem (electric field) &rarr; Lorentz-force circular motion (magnetic field) &rarr; geometry for deflection angle. Three steps spanning two domains.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B2. (Charged oil drop + variable capacitor voltage + work)</div>
+    <div class="stem">Two horizontal parallel plates are separated by distance $d$, with the <b>upper plate positively charged</b>. An oil drop of mass $m$ and charge $q$ is in <b>static equilibrium</b> exactly midway between the plates.</div>
+    <div class="subq" onclick="tog(this)">(1) Determine the sign of the oil drop's charge and find the voltage $U_0$.</div>
+    <div class="answer">Static equilibrium requires the electric force to act upward to balance gravity. Upper plate positive &Rightarrow; field points downward between the plates &Rightarrow; the drop must carry <b>negative charge</b>. Equilibrium: $q\dfrac{U_0}{d}=mg\Rightarrow\boxed{U_0=\dfrac{mgd}{q}}$</div>
+    <div class="subq" onclick="tog(this)">(2) The voltage is suddenly increased to $2U_0$. Find the velocity after time $t$.</div>
+    <div class="answer">Electric force becomes $q\dfrac{2U_0}{d}=2mg$ (upward); net force $F_{\text{net}}=2mg-mg=mg$ (upward); acceleration $a=g$. $\boxed{v=gt\ (\text{vertically upward})}$</div>
+    <div class="subq" onclick="tog(this)">(3) Find the work $W$ done by the electric force during this time interval.</div>
+    <div class="answer">Displacement $s=\dfrac{1}{2}gt^2$ (upward); electric force $2mg$ is in the same direction as displacement: $\boxed{W=2mg\cdot\dfrac{1}{2}gt^2=mg^2t^2}$</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Force balance determines charge sign &rarr; new net force after voltage change &rarr; kinematics for displacement &rarr; work. Each step builds on the previous.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B3. (Energy analysis of LC oscillations)</div>
+    <div class="stem">An ideal LC circuit has capacitance $C$ and inductance $L$. The maximum charge on the capacitor is $Q_0$.</div>
+    <div class="subq" onclick="tog(this)">(1) Use energy conservation to find the maximum current $I_0$.</div>
+    <div class="answer">When charge is maximum, all energy is electric: $\dfrac{Q_0^2}{2C}$. When current is maximum, all energy is magnetic: $\dfrac{LI_0^2}{2}$. Setting them equal: $\boxed{I_0=\dfrac{Q_0}{\sqrt{LC}}}$</div>
+    <div class="subq" onclick="tog(this)">(2) Write down the oscillation period $T$.</div>
+    <div class="answer">$\boxed{T=2\pi\sqrt{LC}}$</div>
+    <div class="subq" onclick="tog(this)">(3) Find the current $i$ when the charge is $\dfrac{Q_0}{2}$.</div>
+    <div class="answer">Energy conservation: $\dfrac{q^2}{2C}+\dfrac{Li^2}{2}=\dfrac{Q_0^2}{2C}$. Substituting $q=\dfrac{Q_0}{2}$: $\dfrac{Li^2}{2}=\dfrac{3}{4}\dfrac{Q_0^2}{2C}$, so $\boxed{i=\dfrac{\sqrt{3}}{2}I_0\approx0.87I_0}$
+      <div style="margin-top:.3rem">Note: the energy method gives only the <b>magnitude</b>. With direction: $i=\pm\dfrac{\sqrt{3}}{2}I_0$ &mdash; from $q=Q_0\cos\omega t$, the condition $q=\dfrac{Q_0}{2}$ corresponds to $\omega t=\dfrac{\pi}{3}$ (discharging, $i$ negative) or $\omega t=\dfrac{5\pi}{3}$ (charging, $i$ positive). The sign depends on whether the capacitor is discharging or charging at that instant.</div></div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">When the charge is halved, the current is <b>not</b> half the maximum but rather $\dfrac{\sqrt{3}}{2}$ times it &mdash; a consequence of the nonlinear (quadratic) relationship in the energy expressions.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B4. (Rail-and-rod problem &middot; electromagnetic induction, advanced)</div>
+    <div class="stem">Two smooth horizontal rails are separated by distance $L$, with a vertical downward magnetic field $B$. The rails have no resistance and are connected at one end by resistance $R$. A conducting rod of mass $m$ is pushed by a <b>constant horizontal force $F$</b>, starting from rest.</div>
+    <div class="subq" onclick="tog(this)">(1) Find the maximum speed $v_{\text{max}}$ the rod can reach.</div>
+    <div class="answer">Induced EMF $\varepsilon=BLv$ &rarr; current $I=\dfrac{BLv}{R}$ &rarr; Ampere force $F_{\text{A}}=\dfrac{B^2L^2v}{R}$. At maximum speed the acceleration is zero, so $F=F_{\text{A}}$: $\boxed{v_{\text{max}}=\dfrac{FR}{B^2L^2}}$</div>
+    <div class="subq" onclick="tog(this)">(2) Find the acceleration $a$ when $v=\dfrac{v_{\text{max}}}{2}$.</div>
+    <div class="answer">At this speed $F_{\text{A}}=\dfrac{1}{2}F$, so the net force is $\dfrac{1}{2}F$: $\boxed{a=\dfrac{F}{2m}}$</div>
+    <div class="subq" onclick="tog(this)">(3) When the rod has traveled displacement $s$ and reached speed $v$ ($v&lt;v_{\text{max}}$), find the Joule heat $Q_R$ dissipated in $R$.</div>
+    <div class="answer">Energy conservation (smooth rails, rod with no resistance): $Fs=\dfrac{1}{2}mv^2+Q_R$, so $\boxed{Q_R=Fs-\dfrac{1}{2}mv^2}$. (This is exact for any $v&lt;v_{\text{max}}$, using the actual $s$ and $v$ at the same instant.)</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Induced EMF &rarr; current &rarr; Ampere force &rarr; dynamics (for $v_{\text{max}}$ and $a$) &rarr; energy conservation (for heat). This is the standard structure of advanced electromagnetic-induction problems.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B5. (Rod + capacitor &middot; elegant variation)</div>
+    <div class="stem">Replace the resistor in B4 with a capacitor of capacitance $C$ (rails and rod still have no resistance), with all other conditions the same, starting from rest.</div>
+    <div class="subq" onclick="tog(this)">(1) Describe qualitatively what motion the rod undergoes.</div>
+    <div class="answer">The rod undergoes <b>uniform acceleration</b> (constant acceleration) in a straight line.</div>
+    <div class="subq" onclick="tog(this)">(2) Find the acceleration $a$.</div>
+    <div class="answer">The capacitor voltage equals the induced EMF: $U_C=BLv$. Charge on capacitor: $q=CBLv$. Charging current: $I=\dfrac{\Delta q}{\Delta t}=CBLa$. Ampere force: $F_{\text{A}}=BIL=CB^2L^2a$. Newton's second law: $F-CB^2L^2a=ma$, so $\boxed{a=\dfrac{F}{m+CB^2L^2}}$ (constant &Rightarrow; uniform acceleration).</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Contrast with B4: with a <b>resistor</b> the Ampere force is proportional to $v$ &rarr; non-uniform acceleration approaching a terminal speed; with a <b>capacitor</b> the Ampere force is proportional to $a$ &rarr; constant acceleration, uniform motion. Same apparatus, different component, completely different kinematics.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B6. (Geometry of a bounded magnetic field &middot; challenge)</div>
+    <div class="stem">A positive charge of mass $m$ and charge $q$ enters a uniform magnetic field (directed into the page) of width $d$ <b>perpendicular to the left boundary</b> with speed $v$.</div>
+    <div class="subq" onclick="tog(this)">(1) If the particle just barely exits from the right boundary, find $B$.</div>
+    <div class="answer">Radius $r=\dfrac{mv}{qB}$; the maximum horizontal penetration depth equals $r$. The critical condition for just exiting the right boundary is $r=d$: $\boxed{B=\dfrac{mv}{qd}}$</div>
+    <div class="subq" onclick="tog(this)">(2) Under this critical condition, find the time $t$ the particle spends inside the field.</div>
+    <div class="answer">When $r=d$ the particle turns exactly $90^\circ$ (one quarter of a full circle): $t=\dfrac{T}{4}=\dfrac{\pi m}{2qB}$. Substituting $B$: $\boxed{t=\dfrac{\pi d}{2v}}$ (independent of $m$, $q$, and $B$).</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Lorentz-force circular motion + critical condition ($r=d$) + geometry ($90^\circ$ turn) + period formula.</div>
+  </div>
+
+  <div class="prob">
+    <div class="prob-title">B6 Extension. (Bounded magnetic field + gravity &middot; beyond-syllabus challenge)</div>
+    <div class="stem">Same setup as B6, but <b>gravity is not neglected</b> (directed vertically downward, perpendicular to the entry velocity), and <b>$B$ is given while $d$ is unknown</b>. The particle just exits tangentially from the right boundary. Find $d$ and $t$. Hint: drift velocity $v_{\text{drift}}=\dfrac{mg}{qB}$; tangency condition $v_x=0$.</div>
+    <div class="subq" onclick="tog(this)">(1) Find the width $d$ of the magnetic field region.</div>
+    <div class="answer">$d=x(t^{*})$; substituting $v_{\text{drift}}=\dfrac{mg}{qB}$ and simplifying: $$\boxed{d=\dfrac{m}{q^{2}B^{2}}\left[mg\arccos\!\left(\dfrac{-mg}{qBv-mg}\right)+\sqrt{qBv(qBv-2mg)}\right]}$$</div>
+    <div class="subq" onclick="tog(this)">(2) Find the time $t$ from entry to reaching the right boundary.</div>
+    <div class="answer">Tangency condition $\cos\omega t^{*}=-\dfrac{mg}{qBv-mg}$ (where $\omega=\dfrac{qB}{m}$): $$\boxed{t=\dfrac{m}{qB}\arccos\!\left(\dfrac{-mg}{qBv-mg}\right)}$$</div>
+    <div class="subq note-q" onclick="tog(this)">Key points</div>
+    <div class="answer note">Gravity deforms the circular trajectory into a <b>cycloid</b>. The tangency condition $v_x=0$ determines $t$, which is then substituted to obtain $d$. Taking $g\to0$ recovers the B6 results $t=\dfrac{T}{4}$ and $d=r$. Finding $B$ given $d$ leads to a transcendental equation &mdash; the forward and inverse problems are asymmetric.</div>
+  </div>
+
+</div>
+<footer>Click a sub-question to reveal its answer &nbsp;&middot;&nbsp; "Show All Answers" expands everything at once &nbsp;&middot;&nbsp; Equations rendered by MathJax</footer>
+<script>
+function tog(el){
+  el.classList.toggle('open');
+  const a=el.nextElementSibling;
+  if(a&&a.classList.contains('answer')) a.classList.toggle('show');
+}
+function hideAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.remove('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.remove('open'));
+}
+function showAll(){
+  document.querySelectorAll('.answer').forEach(a=>a.classList.add('show'));
+  document.querySelectorAll('.subq').forEach(s=>s.classList.add('open'));
+}
+function toggleAll(btn){
+  const anyHidden=[...document.querySelectorAll('.answer')].some(a=>!a.classList.contains('show'));
+  if(anyHidden){showAll();btn.textContent='Hide All Answers';}
+  else{hideAll();btn.textContent='Show All Answers';}
+}
+</script>
+</body>
+</html>

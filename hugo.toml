@@ -1,15 +1,15 @@
 baseURL = 'https://changzh.me/'
-locale = 'zh-cn'
 title = 'Blog of Brian'
 theme = 'PaperMod'
+
+# Default site language; zh lives at root (/), en lives under /en/
+defaultContentLanguage = 'zh'
 
 # Pagination: posts per page
 [pagination]
   pagerSize = 10
 
 [params]
-  # Text shown on the homepage
-  description = "个人学习笔记与随想"
   # Show reading time on posts
   ShowReadingTime = true
   # Show a table of contents on posts
@@ -23,25 +23,64 @@ theme = 'PaperMod'
       block = [['$$', '$$'], ['\[', '\]']]
       inline = [['$', '$'], ['\(', '\)']]
 
-[menu]
-  # Top navigation menu items
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    identifier = "exercises"
-    name = "物理习题"
-    url = "/exercises/"
-    weight = 15
-  [[menu.main]]
-    identifier = "english"
-    name = "英语学习"
-    url = "/english/"
-    weight = 17
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 20
+# --- Multilingual (i18n) ---
+# The right-corner language switcher (PaperMod built-in) appears automatically
+# once two languages are configured. Each language has its own nav menu.
+[languages]
+  [languages.zh]
+    label = 'Chinese'
+    locale = 'zh-CN'
+    weight = 1
+    title = 'Blog of Brian'
+    [languages.zh.params]
+      description = "个人学习笔记与随想"
+    [languages.zh.menu]
+      [[languages.zh.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 10
+      [[languages.zh.menu.main]]
+        identifier = "exercises"
+        name = "物理习题"
+        url = "/exercises/"
+        weight = 15
+      [[languages.zh.menu.main]]
+        identifier = "english"
+        name = "英语学习"
+        url = "/english/"
+        weight = 17
+      [[languages.zh.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 20
+
+  [languages.en]
+    label = 'English'
+    locale = 'en'
+    weight = 2
+    title = 'Blog of Brian'
+    [languages.en.params]
+      description = "Personal study notes and musings"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 10
+      [[languages.en.menu.main]]
+        identifier = "exercises"
+        name = "Physics"
+        url = "/exercises/"
+        weight = 15
+      [[languages.en.menu.main]]
+        identifier = "english"
+        name = "English"
+        url = "/english/"
+        weight = 17
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 20
