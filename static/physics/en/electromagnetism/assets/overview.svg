@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1070" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="1070" fill="#fbfcfe"/>
+
+  <!-- vertical trunk lines (behind cards) -->
+  <line x1="385" y1="182" x2="385" y2="856" stroke="#c7d2e0" stroke-width="2"/>
+  <line x1="1015" y1="182" x2="1015" y2="856" stroke="#e6c3b3" stroke-width="2"/>
+
+  <!-- ===== TOP: the Field ===== -->
+  <rect x="545" y="22" width="310" height="74" rx="12" fill="#2c3e50" filter="url(#shadow)"/>
+  <text x="700" y="52" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Field</text>
+  <text x="700" y="78" text-anchor="middle" fill="#d6dde5" font-size="12">Invisible matter, revealed by the force it exerts on objects in it</text>
+
+  <!-- branches to two columns -->
+  <path d="M660,96 L470,128" stroke="#7f8c8d" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M740,96 L930,128" stroke="#7f8c8d" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- column headers -->
+  <rect x="235" y="132" width="300" height="50" rx="10" fill="#4285f4" filter="url(#shadow)"/>
+  <text x="385" y="163" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Electric Field</text>
+
+  <rect x="620" y="140" width="160" height="42" rx="10" fill="#34a853" filter="url(#shadow)"/>
+  <text x="700" y="167" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Study paradigm</text>
+
+  <rect x="865" y="132" width="300" height="50" rx="10" fill="#e8703a" filter="url(#shadow)"/>
+  <text x="1015" y="163" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">Magnetic Field</text>
+
+  <!-- ROW 1: Source  y=210 -->
+  <rect x="620" y="228" width="160" height="56" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+  <text x="700" y="253" text-anchor="middle" fill="#1e7e34" font-size="17" font-weight="700">① Source</text>
+  <text x="700" y="273" text-anchor="middle" fill="#1e7e34" font-size="11">where field comes from</text>
+
+  <rect x="170" y="210" width="430" height="92" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="190" y="240" fill="#1a56c4" font-size="16" font-weight="700">Static charge → electrostatic field</text>
+  <text x="190" y="266" fill="#333" font-size="14">Charge conservation · elementary charge e</text>
+  <text x="190" y="289" fill="#333" font-size="14">Coulomb's law  F = k·q₁q₂ / r²</text>
+
+  <rect x="800" y="210" width="430" height="92" rx="10" fill="#fdecea" stroke="#e8703a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="820" y="240" fill="#c0392b" font-size="16" font-weight="700">Moving charge / current</text>
+  <text x="820" y="266" fill="#333" font-size="14">No magnetic monopole</text>
+  <text x="820" y="289" fill="#333" font-size="14">Direction: Ampère's rule (right-hand screw)</text>
+
+  <!-- ROW 2: Field quantity  y=320 -->
+  <rect x="620" y="338" width="160" height="56" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+  <text x="700" y="363" text-anchor="middle" fill="#1e7e34" font-size="15" font-weight="700">② Field quantity</text>
+  <text x="700" y="383" text-anchor="middle" fill="#1e7e34" font-size="11">magnitude + direction</text>
+
+  <rect x="170" y="320" width="430" height="92" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="190" y="350" fill="#1a56c4" font-size="15" font-weight="700">Field strength E = F / q (vector, "force")</text>
+  <text x="190" y="376" fill="#333" font-size="13">Point charge E = kQ/r² · uniform field E = U/d · field lines</text>
+  <text x="190" y="399" fill="#333" font-size="13">Potential φ, p.d. U (scalar, "energy") · equipotentials</text>
+
+  <rect x="800" y="320" width="430" height="92" rx="10" fill="#fdecea" stroke="#e8703a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="820" y="350" fill="#c0392b" font-size="15" font-weight="700">Flux density B = F /(I·L) (vector)</text>
+  <text x="820" y="376" fill="#333" font-size="14">Field lines: closed loops, no start/end</text>
+  <text x="820" y="399" fill="#333" font-size="14">Magnetic flux Φ = B·S (scalar)</text>
+
+  <!-- ROW 3: Force  y=430 -->
+  <rect x="620" y="448" width="160" height="56" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+  <text x="700" y="473" text-anchor="middle" fill="#1e7e34" font-size="17" font-weight="700">③ Force</text>
+  <text x="700" y="493" text-anchor="middle" fill="#1e7e34" font-size="11">field acting on objects</text>
+
+  <rect x="170" y="430" width="430" height="92" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="190" y="463" fill="#1a56c4" font-size="16" font-weight="700">F = qE</text>
+  <text x="190" y="492" fill="#333" font-size="14">+charge along E, −charge against E</text>
+  <text x="190" y="512" fill="#666" font-size="13">(force even when charge is at rest)</text>
+
+  <rect x="800" y="430" width="430" height="92" rx="10" fill="#fdecea" stroke="#e8703a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="820" y="458" fill="#c0392b" font-size="16" font-weight="700">Ampère force F = BIL (left hand)</text>
+  <text x="820" y="484" fill="#333" font-size="14">Lorentz force F = qvB (left hand, no work)</text>
+  <text x="820" y="507" fill="#666" font-size="13">(needs motion with a perpendicular component)</text>
+
+  <!-- ROW 4: Motion  y=540 -->
+  <rect x="620" y="558" width="160" height="56" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+  <text x="700" y="583" text-anchor="middle" fill="#1e7e34" font-size="17" font-weight="700">④ Motion</text>
+  <text x="700" y="603" text-anchor="middle" fill="#1e7e34" font-size="11">dynamics + kinematics</text>
+
+  <rect x="170" y="540" width="430" height="92" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="190" y="570" fill="#1a56c4" font-size="16" font-weight="700">Projectile-like motion</text>
+  <text x="190" y="596" fill="#333" font-size="14">Enter ⊥ field → projectile-like</text>
+  <text x="190" y="619" fill="#333" font-size="14">Along field → uniformly accelerated line</text>
+
+  <rect x="800" y="540" width="430" height="92" rx="10" fill="#fdecea" stroke="#e8703a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="820" y="570" fill="#c0392b" font-size="16" font-weight="700">Uniform circular motion (v ⊥ B)</text>
+  <text x="820" y="596" fill="#333" font-size="14">qvB = mv²/r  →  r = mv /(qB)</text>
+  <text x="820" y="619" fill="#333" font-size="14">T = 2πm /(qB) (period independent of v)</text>
+
+  <!-- ROW 5: Energy  y=650 -->
+  <rect x="620" y="668" width="160" height="56" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+  <text x="700" y="693" text-anchor="middle" fill="#1e7e34" font-size="17" font-weight="700">⑤ Energy</text>
+  <text x="700" y="713" text-anchor="middle" fill="#1e7e34" font-size="11">work &amp; conversion</text>
+
+  <rect x="170" y="650" width="430" height="92" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="190" y="680" fill="#1a56c4" font-size="15" font-weight="700">Work by electric force W = qU (conservative)</text>
+  <text x="190" y="706" fill="#333" font-size="14">Potential energy Eₚ = qφ · path-independent</text>
+  <text x="190" y="729" fill="#333" font-size="14">Acceleration: qU = ½mv²</text>
+
+  <rect x="800" y="650" width="430" height="92" rx="10" fill="#fdecea" stroke="#e8703a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="820" y="680" fill="#c0392b" font-size="16" font-weight="700">Lorentz force does no work</text>
+  <text x="820" y="706" fill="#333" font-size="14">Always ⊥ v → changes direction only, not speed</text>
+  <text x="820" y="729" fill="#333" font-size="13">Ampère force does work → electrical/mechanical energy conversion</text>
+
+  <!-- ROW 6: Applications  y=760 -->
+  <rect x="620" y="778" width="160" height="56" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+  <text x="700" y="803" text-anchor="middle" fill="#1e7e34" font-size="16" font-weight="700">⑥ Applications</text>
+  <text x="700" y="823" text-anchor="middle" fill="#1e7e34" font-size="11">instruments / devices</text>
+
+  <rect x="170" y="760" width="430" height="92" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="190" y="790" fill="#1a56c4" font-size="16" font-weight="700">Capacitor C = Q / U</text>
+  <text x="190" y="816" fill="#333" font-size="14">Parallel plate C = εS /(4πkd)</text>
+  <text x="190" y="839" fill="#333" font-size="14">Dynamic: connected U const / disconnected Q const</text>
+
+  <rect x="800" y="760" width="430" height="92" rx="10" fill="#fdecea" stroke="#e8703a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="820" y="790" fill="#c0392b" font-size="16" font-weight="700">Mass spectrometer · cyclotron</text>
+  <text x="820" y="816" fill="#333" font-size="14">Velocity selector (electric force = Lorentz force)</text>
+  <text x="820" y="839" fill="#333" font-size="14">MHD generation</text>
+
+  <!-- ===== BOTTOM: bridge ===== -->
+  <path d="M385,856 L520,902" stroke="#8e44ad" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1015,856 L880,902" stroke="#8e44ad" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="300" y="905" width="800" height="120" rx="14" fill="#f3e8fd" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="938" text-anchor="middle" fill="#6c3483" font-size="19" font-weight="700">Bridge: electromagnetic induction (unifies electricity &amp; magnetism)</text>
+  <text x="700" y="967" text-anchor="middle" fill="#333" font-size="13">Changing B → EMF: ε = n·ΔΦ/Δt · motional ε = BLv · Lenz's law (opposes change) · right-hand rule</text>
+  <text x="700" y="991" text-anchor="middle" fill="#333" font-size="14">Changing E → B (Maxwell's idea)</text>
+  <text x="700" y="1013" text-anchor="middle" fill="#6c3483" font-size="15" font-weight="700">→ Electromagnetic field · EM wave</text>
+</svg>

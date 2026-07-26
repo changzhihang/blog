@@ -12,7 +12,7 @@ A collection of physics practice problems I've put together (advanced level). Ea
 
 An **interactive knowledge graph** tying electromagnetism together (electric field · magnetic field · induction): 25 knowledge points arranged in layers, with both guided cards and a force-directed relationship network — click any node to expand an in-depth explanation (with formulas) and see how it connects to the others ("which determines which, which is derived from which"). A good way to build the overall framework before working through the practice sets below.
 
-👉 **[Open: Electromagnetism Knowledge Graph](/physics/electromagnetism/)**
+👉 **[Open: Electromagnetism Knowledge Graph](/physics/en/electromagnetism/)**
 
 ---
 

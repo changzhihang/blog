@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>电磁学知识图谱</title>
+<title>Electromagnetism Knowledge Graph</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 window.MathJax = {
@@ -136,15 +136,15 @@ window.MathJax = {
 <body>
 
 <header>
-  <a class="backbtn" href="/exercises/">← 返回</a>
-  <h1><span class="dot"></span>电磁学知识图谱</h1>
+  <a class="backbtn" href="/en/exercises/">← Back</a>
+  <h1><span class="dot"></span>Electromagnetism Knowledge Graph</h1>
   <div class="tabs">
-    <button class="tab active" data-view="guided">📖 引导</button>
-    <button class="tab" data-view="graph">🕸 图谱</button>
+    <button class="tab active" data-view="guided">📖 Guided</button>
+    <button class="tab" data-view="graph">🕸 Graph</button>
   </div>
-  <div class="search"><input id="search" placeholder="搜索知识点…"></div>
-  <button class="toolbtn" id="btn-ann">我的批注 <span class="ann-count" id="ann-n">0</span></button>
-  <button class="toolbtn" id="btn-export">导出批注</button>
+  <div class="search"><input id="search" placeholder="Search knowledge points…"></div>
+  <button class="toolbtn" id="btn-ann">My notes <span class="ann-count" id="ann-n">0</span></button>
+  <button class="toolbtn" id="btn-export">Export notes</button>
 </header>
 
 <main>
@@ -152,7 +152,7 @@ window.MathJax = {
   <div class="view" id="view-graph">
     <svg id="graph-svg"></svg>
     <div class="graph-legend" id="graph-legend"></div>
-    <div class="graph-hint">拖动画布平移 · 点节点看卡片 + 高亮串联关系 · 滚轮缩放 · 角标 <span style="color:#fbbf24">●</span> 冲满分拓展</div>
+    <div class="graph-hint">Drag canvas to pan · click a node for its card + highlighted links · scroll to zoom · badge <span style="color:#fbbf24">●</span> advanced extension</div>
   </div>
 </main>
 
@@ -169,17 +169,17 @@ window.MathJax = {
 
 <!-- annotation floating toolbar -->
 <div id="ann-toolbar">
-  <button data-act="note">✏️ 批注</button>
-  <button data-act="q">❓ 存疑/提问</button>
-  <button data-act="hl">🖊 高亮</button>
+  <button data-act="note">✏️ Note</button>
+  <button data-act="q">❓ Question</button>
+  <button data-act="hl">🖊 Highlight</button>
 </div>
 
 <!-- annotation panel -->
 <div id="ann-panel">
   <div class="drawer-head">
     <button class="drawer-close" id="ann-close">✕</button>
-    <h2>我的批注</h2>
-    <div class="oneline">选中卡片里的文字 → 批注 / 存疑 / 高亮。全部存在本地浏览器,可导出给老师合并回文档。</div>
+    <h2>My notes</h2>
+    <div class="oneline">Select text inside a card → note / question / highlight. Everything is stored locally in your browser and can be exported to merge back into the document.</div>
   </div>
   <div id="ann-list"></div>
 </div>
@@ -208,10 +208,10 @@ window.MathJax = {
   // ============ guided view ============
   function renderGuided(){
     const el = views.guided;
-    let html = `<div class="intro">这是把<b>电磁学</b>全部知识组织起来的学习站。<b>顺着下面的分层读</b>(基本概念 → 电场 → 磁场 → 电磁感应)可以入门;想看知识点之间的<b>推导与串联关系</b>,切到 <b>🕸 图谱</b>;点任意卡片展开深度内容(含公式),选中文字可就地批注/存疑。角标 <span style="color:#34d399">🎯 主干</span> = 高考必考,<span style="color:#fbbf24">⭐ 拓展</span> = 冲满分拓展。</div>
+    let html = `<div class="intro">A study hub that organizes <b>all of electromagnetism</b>. <b>Read down through the layers</b> (basics → electric field → magnetic field → induction) to get started; to see the <b>derivations and links between knowledge points</b>, switch to <b>🕸 Graph</b>; click any card to expand in-depth content (with formulas), and select text to annotate/question it in place. Badge <span style="color:#34d399">🎯 Core</span> = exam essential, <span style="color:#fbbf24">⭐ Advanced</span> = beyond-syllabus extension.</div>
       <div class="overview">
-        <img src="assets/overview.svg" alt="电磁学六维度总览">
-        <div class="ov-cap">六维度总览:研究任何一种场都走同一套范式 —— 源 → 场量 → 力 → 运动 → 能量 → 应用。下面卡片是每个知识点的深度展开。</div>
+        <img src="assets/overview.svg" alt="Electromagnetism six-dimension overview">
+        <div class="ov-cap">Six-dimension overview: studying any field follows the same paradigm — source → field quantity → force → motion → energy → application. The cards below are the in-depth expansion of each knowledge point.</div>
       </div>`;
     LAYERS.forEach(layer=>{
       const items = NODES.filter(n=>n.layer===layer.id);
@@ -224,7 +224,7 @@ window.MathJax = {
         <div class="card-grid">`;
       items.forEach(n=>{
         let tags='';
-        if(n.coverage) tags += `<span class="cov ${n.coverage}">${n.coverage==='ok'?'🎯 高考主干':'⭐ 冲满分拓展'}</span>`;
+        if(n.coverage) tags += `<span class="cov ${n.coverage}">${n.coverage==='ok'?'🎯 Core':'⭐ Advanced'}</span>`;
         html += `<div class="mini-card" style="border-left-color:${layer.color}" data-id="${n.id}">
           <h3>${n.title}</h3>
           <p>${n.oneLine}</p>
@@ -252,7 +252,7 @@ window.MathJax = {
     const badge = document.getElementById('d-badge');
     const layer = LAYERS.find(l=>l.id===n.layer);
     badge.textContent = layer.label; badge.style.background=hex(lc,.18); badge.style.color=lc;
-    const covMap={ok:'🎯 高考主干',partial:'⭐ 冲满分拓展'};
+    const covMap={ok:'🎯 Core',partial:'⭐ Advanced'};
     let tags='';
     if(n.coverage) tags += `<span class="cov ${n.coverage}">${covMap[n.coverage]}</span>`;
     document.getElementById('d-tags').innerHTML = tags;
@@ -260,12 +260,12 @@ window.MathJax = {
     document.getElementById('d-oneline').textContent = n.oneLine;
     let body = n.body;
     if(n.edges && n.edges.length){
-      body += `<div class="sec-title">关联 / 串联</div><div class="edges-wrap">`;
+      body += `<div class="sec-title">Related / linked</div><div class="edges-wrap">`;
       n.edges.forEach(e=>{ const t=byId[e.to]; if(t) body += `<span class="edge-chip" data-goto="${e.to}"><span class="etype">${e.type}</span>${t.title}</span>`; });
       body += `</div>`;
     }
     if(n.sources && n.sources.length){
-      body += `<div class="sec-title">来源 / 深挖</div><div class="links">`;
+      body += `<div class="sec-title">Sources / dig deeper</div><div class="links">`;
       n.sources.forEach(s=> body += `<a href="${s.href}" target="_blank">${s.label}</a>`);
       body += `</div>`;
     }
@@ -434,7 +434,7 @@ window.MathJax = {
   toolbar.querySelectorAll('button').forEach(b=>b.onclick=()=>{
     if(!pendingSel)return; const act=b.dataset.act;
     let note='';
-    if(act==='note'||act==='q'){ note=prompt(act==='q'?'你的疑问 / 存疑说明:':'你的批注:'); if(note===null){toolbar.classList.remove('show');return;} }
+    if(act==='note'||act==='q'){ note=prompt(act==='q'?'Your question / point of doubt:':'Your note:'); if(note===null){toolbar.classList.remove('show');return;} }
     annotations.push({ id:Date.now(), nodeId:pendingSel.nodeId, quote:pendingSel.text, kind:act==='hl'?'hl':(act==='q'?'q':'note'), note, ts:new Date().toISOString() });
     saveAnn(); toolbar.classList.remove('show'); window.getSelection().removeAllRanges();
     applyAnnotations(pendingSel.nodeId); renderAnnList();
@@ -458,13 +458,13 @@ window.MathJax = {
   document.getElementById('ann-close').onclick=()=>annPanel.classList.remove('open');
   function renderAnnList(){
     const list=document.getElementById('ann-list');
-    if(!annotations.length){ list.innerHTML='<div class="ann-empty">还没有批注。<br><br>打开任意知识卡片,用鼠标选中一段文字,就会浮出批注工具条。你标的"存疑/提问"可以导出给老师读、并合并回源文档。</div>'; return; }
+    if(!annotations.length){ list.innerHTML='<div class="ann-empty">No notes yet.<br><br>Open any knowledge card and select a passage of text with your mouse — the annotation toolbar will pop up. Items you mark as "question" can be exported and merged back into the source document.</div>'; return; }
     list.innerHTML=annotations.slice().reverse().map(a=>{
       const n=byId[a.nodeId]; const kindC=a.kind==='q'?'q':'note';
       return `<div class="ann-item ${kindC}">
         <div class="quote">"${esc(a.quote)}"</div>
-        ${a.note?`<div class="txt">${a.kind==='q'?'❓ ':'✏️ '}${esc(a.note)}</div>`:'<div class="txt" style="color:#fbbf24">🖊 高亮</div>'}
-        <div class="meta"><span>${n?n.title:a.nodeId}</span><span class="del" data-del="${a.id}">删除</span></div>
+        ${a.note?`<div class="txt">${a.kind==='q'?'❓ ':'✏️ '}${esc(a.note)}</div>`:'<div class="txt" style="color:#fbbf24">🖊 Highlight</div>'}
+        <div class="meta"><span>${n?n.title:a.nodeId}</span><span class="del" data-del="${a.id}">Delete</span></div>
       </div>`;
     }).join('');
     list.querySelectorAll('.del').forEach(d=>d.onclick=()=>{ annotations=annotations.filter(x=>x.id!=d.dataset.del); saveAnn(); renderAnnList(); const cur=document.getElementById('d-body').dataset.nodeId; if(cur)applyAnnotations(cur); });
