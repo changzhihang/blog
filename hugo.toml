@@ -51,6 +51,11 @@ defaultContentLanguage = 'zh'
         url = "/english/"
         weight = 17
       [[languages.zh.menu.main]]
+        identifier = "geography"
+        name = "地理资料"
+        url = "/geography/"
+        weight = 18
+      [[languages.zh.menu.main]]
         identifier = "tags"
         name = "Tags"
         url = "/tags/"
@@ -79,6 +84,11 @@ defaultContentLanguage = 'zh'
         name = "English"
         url = "/english/"
         weight = 17
+      [[languages.en.menu.main]]
+        identifier = "geography"
+        name = "Geography"
+        url = "/geography/"
+        weight = 18
       [[languages.en.menu.main]]
         identifier = "tags"
         name = "Tags"
