@@ -41,10 +41,20 @@ defaultContentLanguage = 'zh'
         url = "/posts/"
         weight = 10
       [[languages.zh.menu.main]]
+        identifier = "math"
+        name = "数学作业"
+        url = "/math/"
+        weight = 13
+      [[languages.zh.menu.main]]
         identifier = "exercises"
         name = "物理习题"
         url = "/exercises/"
         weight = 15
+      [[languages.zh.menu.main]]
+        identifier = "chemistry"
+        name = "化学作业"
+        url = "/chemistry/"
+        weight = 16
       [[languages.zh.menu.main]]
         identifier = "english"
         name = "英语学习"
@@ -75,10 +85,20 @@ defaultContentLanguage = 'zh'
         url = "/posts/"
         weight = 10
       [[languages.en.menu.main]]
+        identifier = "math"
+        name = "Math"
+        url = "/math/"
+        weight = 13
+      [[languages.en.menu.main]]
         identifier = "exercises"
         name = "Physics"
         url = "/exercises/"
         weight = 15
+      [[languages.en.menu.main]]
+        identifier = "chemistry"
+        name = "Chemistry"
+        url = "/chemistry/"
+        weight = 16
       [[languages.en.menu.main]]
         identifier = "english"
         name = "English"
