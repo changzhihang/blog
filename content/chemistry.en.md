@@ -1,10 +1,19 @@
 +++
 date = '2026-09-13T00:00:00+08:00'
+lastmod = '2026-09-19T10:15:00+08:00'
 draft = false
 title = 'Chemistry Homework'
 +++
 
 Original chemistry homework and study notes in Chinese.
+
+## September 19
+
+- [Grade 11 Chemistry Effective Homework 3: Ionization of Water and Acidity and Alkalinity of Solutions](/chemistry/2026-0919/effective-homework-3.pdf) (4 pages)
+- [Grade 11 Chemistry Effective Homework 4: Ionization Equilibrium of Weak Electrolytes](/chemistry/2026-0919/effective-homework-4.pdf) (4 pages)
+- [Grade 11 Chemistry Effective Homework 5: Salt Hydrolysis](/chemistry/2026-0919/effective-homework-5.pdf) (3 pages)
+- [Grade 11 Chemistry Effective Homework 6: Comparing Ion Concentrations](/chemistry/2026-0919/effective-homework-6.pdf) (3 pages)
+- [Ionic Reactions and Equilibrium in Aqueous Solutions](/chemistry/2026-0919/aqueous-ionic-reactions-equilibrium.pdf) (3 pages)
 
 ## September 6
 

@@ -1,10 +1,19 @@
 +++
 date = '2026-09-13T00:00:00+08:00'
+lastmod = '2026-09-19T10:15:00+08:00'
 draft = false
 title = '化学作业'
 +++
 
 化学作业与知识点整理，提供原 PDF。
+
+## 09/19
+
+- [高二上化学有效作业3：水的电离和溶液的酸碱性](/chemistry/2026-0919/effective-homework-3.pdf)（4 页）
+- [高二上化学有效作业4：弱电解质的电离平衡](/chemistry/2026-0919/effective-homework-4.pdf)（4 页）
+- [高二上化学有效作业5：盐类水解](/chemistry/2026-0919/effective-homework-5.pdf)（3 页）
+- [高二上化学有效作业6：离子浓度大小比较](/chemistry/2026-0919/effective-homework-6.pdf)（3 页）
+- [水溶液中的离子反应与平衡](/chemistry/2026-0919/aqueous-ionic-reactions-equilibrium.pdf)（3 页）
 
 ## 09/06
 
