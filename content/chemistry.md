@@ -1,11 +1,17 @@
 +++
 date = '2026-09-13T00:00:00+08:00'
-lastmod = '2026-09-19T10:15:00+08:00'
+lastmod = '2026-09-26T11:35:58+08:00'
 draft = false
 title = '化学作业'
 +++
 
 化学作业与知识点整理，提供原 PDF。
+
+## 09/26
+
+- [高二上化学有效作业7：盐类水解的应用](/chemistry/2026-0926/effective-homework-7.pdf)（3 页）
+- [高二上化学有效作业8：沉淀溶解平衡](/chemistry/2026-0926/effective-homework-8.pdf)（4 页）
+- [高二化学知识点整理2：电解质基础](/chemistry/2026-0926/knowledge-summary-2.pdf)（4 页，原资料第 1–4 页）
 
 ## 09/19
 

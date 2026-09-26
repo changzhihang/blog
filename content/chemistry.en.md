@@ -1,11 +1,17 @@
 +++
 date = '2026-09-13T00:00:00+08:00'
-lastmod = '2026-09-19T10:15:00+08:00'
+lastmod = '2026-09-26T11:35:58+08:00'
 draft = false
 title = 'Chemistry Homework'
 +++
 
 Original chemistry homework and study notes in Chinese.
+
+## September 26
+
+- [Grade 11 Chemistry Effective Homework 7: Applications of Salt Hydrolysis](/chemistry/2026-0926/effective-homework-7.pdf) (3 pages)
+- [Grade 11 Chemistry Effective Homework 8: Precipitation and Dissolution Equilibrium](/chemistry/2026-0926/effective-homework-8.pdf) (4 pages)
+- [Grade 11 Chemistry Knowledge Summary 2: Electrolyte Fundamentals](/chemistry/2026-0926/knowledge-summary-2.pdf) (4 pages; pages 1–4 of the original handout)
 
 ## September 19
 
