@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数学2.1(3)：直线与圆的位置关系 | 简略解析</title><meta name="description" content="题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。">
+<style>:root{color-scheme:light;--ink:#172b3a;--muted:#596c78;--line:#dce5e9;--accent:#146e76;--paper:#fff;--bg:#f3f6f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 24px 72px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px;margin-bottom:28px}a{color:var(--accent);text-underline-offset:4px}
+h1{font-size:clamp(25px,4vw,38px);line-height:1.4;margin:8px 0 16px;letter-spacing:-.025em}.intro,.legend,.source-note{color:var(--muted)}.legend,.source-note{font-size:14px}.count{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--accent)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.toolbar button,.answer-toggle{border:1px solid var(--line);border-radius:7px;padding:8px 14px;background:var(--paper);color:var(--accent);font:inherit;font-size:14px;cursor:pointer}.toolbar button:first-child{background:var(--accent);color:white;border-color:var(--accent)}
+.question{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:14px 0;padding:20px 24px}.question h2{font-size:17px;font-weight:500;line-height:1.75;margin:0 0 13px}.question-heading{width:100%;display:flex;align-items:baseline;gap:15px;text-align:left;background:none;border:0;color:inherit;padding:0;font:inherit;cursor:pointer}.number{color:var(--accent);font-weight:750;white-space:nowrap;font-size:14px}.stem{min-width:0;overflow-wrap:anywhere}.answer{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;overflow-wrap:anywhere}.answer p{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #68b9c3;outline-offset:4px}mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 0}footer{margin-top:32px}
+@media(max-width:600px){main{padding:20px 14px 48px}.question{padding:17px 16px}.question-heading{gap:10px}body{font-size:16px}}
+@media print{body{background:white}nav,.toolbar,.answer-toggle{display:none}.question{break-inside:avoid;border-radius:0}.answer{display:block!important}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']] },options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body><main>
+<nav aria-label="Navigation"><a href="/math/">返回作业目录</a><a href="/math/2026-0906/section-2-1-3.pdf?v=6f1fc7bf826a">查看原 PDF</a><a href="/math/en/brief-2026-0906-section-2-1-3.html" lang="en">English</a></nav>
+<div class="count">共 20 个题目或小问</div><h1>数学2.1(3)：直线与圆的位置关系 | 简略解析</h1>
+<p class="intro">题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。</p><p class="legend">编号说明：E = 例题，C = 课堂练习，H = 课后作业；P1–P4 对应原 PDF 页码。其余编号与原卷题号或章节对应。</p>
+<div class="toolbar"><button type="button" data-all="show">全部显示答案</button><button type="button" data-all="hide">全部隐藏答案</button></div>
+<article class="question" id="q-1">
+<h2><button type="button" class="question-heading" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false"><span class="number">E1</span><span class="stem">$2x-y+b=0$ 与圆 $x^2+y^2=9$ 的交点个数。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-1" style="display:none"><p>两点：$|b|&lt;3\sqrt5$；一点：$|b|=3\sqrt5$；零点：$|b|&gt;3\sqrt5$。比较 $d=|b|/\sqrt5$ 与 $r=3$。</p></div>
+</article>
+<article class="question" id="q-2">
+<h2><button type="button" class="question-heading" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false"><span class="number">E2.1</span><span class="stem">$x+2y=0$ 截圆 $x^2+y^2-6x-2y-15=0$ 的弦长。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-2" style="display:none"><p>$4\sqrt5$。圆心 $(3,1)$、$r=5,d=\sqrt5$，弦长 $2\sqrt{r^2-d^2}$。</p></div>
+</article>
+<article class="question" id="q-3">
+<h2><button type="button" class="question-heading" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false"><span class="number">E2.2</span><span class="stem">过 $(-3,-\tfrac32)$，截圆 $x^2+y^2=25$ 的弦长为 $8$ 的直线。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-3" style="display:none"><p>$x=-3$ 或 $3x+4y+15=0$。弦心距为 $\sqrt{25-16}=3$，并单独检查竖直线。</p></div>
+</article>
+<article class="question" id="q-4">
+<h2><button type="button" class="question-heading" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false"><span class="number">E3</span><span class="stem">过 $M(2,-6)$ 的割线截圆 $x^2+y^2=16$，求弦中点轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-4" style="display:none"><p>$(x-1)^2+(y+3)^2=10$，且 $x^2+y^2&lt;16$。由 $\overrightarrow{OC}\cdot\overrightarrow{MC}=0$，并要求弦长大于零。</p></div>
+</article>
+<article class="question" id="q-5">
+<h2><button type="button" class="question-heading" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false"><span class="number">E4</span><span class="stem">参数直线 $(2m+1)x+(m+1)y-7m-4=0$ 与圆 $(x-1)^2+(y-2)^2=25$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-5" style="display:none"><p>(1) 直线恒过圆内点 $(3,1)$，故恒交两点；(2) 最短弦对应直线 $2x-y-5=0$（$m=-3/4$），弦长 $4\sqrt5$。此时直线垂直于圆心与定点连线。</p></div>
+</article>
+<article class="question" id="q-6">
+<h2><button type="button" class="question-heading" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false"><span class="number">C1</span><span class="stem">$x-y-5=0$ 截圆 $(x-2)^2+(y+2)^2=1$ 的弦长。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-6" style="display:none"><p>$\sqrt2$，由 $d=1/\sqrt2$ 及 $L=2\sqrt{1-d^2}$。</p></div>
+</article>
+<article class="question" id="q-7">
+<h2><button type="button" class="question-heading" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false"><span class="number">C2</span><span class="stem">$x-y+b=0$ 截圆 $x^2+y^2=25$ 的弦长为 $8$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-7" style="display:none"><p>$b=\pm3\sqrt2$；$b^2/2=25-4^2=9$。</p></div>
+</article>
+<article class="question" id="q-8">
+<h2><button type="button" class="question-heading" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false"><span class="number">C3</span><span class="stem">从 $(6,8)$ 向圆 $x^2+y^2=16$ 引割线，求弦中点轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-8" style="display:none"><p>$(x-3)^2+(y-4)^2=25$，且 $x^2+y^2&lt;16$；利用圆心到弦中点的垂直关系。</p></div>
+</article>
+<article class="question" id="q-9">
+<h2><button type="button" class="question-heading" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false"><span class="number">H1</span><span class="stem">$x+y-a=0$ 与圆 $x^2+y^2=2$ 相交、相离、相切的条件。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-9" style="display:none"><p>(1) $-2&lt;a&lt;2$；(2) $a&lt;-2$ 或 $a&gt;2$；(3) $a=\pm2$。</p></div>
+</article>
+<article class="question" id="q-10">
+<h2><button type="button" class="question-heading" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false"><span class="number">H2</span><span class="stem">$y=kx+2$ 与 $(x-2)^2+(y-3)^2=1$ 有两个不同交点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-10" style="display:none"><p>$0&lt;k&lt;\frac43$。</p></div>
+</article>
+<article class="question" id="q-11">
+<h2><button type="button" class="question-heading" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false"><span class="number">H3</span><span class="stem">过 $(6,-4)$ 的直线截圆 $x^2+y^2=20$，弦长 $6\sqrt2$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-11" style="display:none"><p>$x+y-2=0$ 或 $7x+17y+26=0$。</p></div>
+</article>
+<article class="question" id="q-12">
+<h2><button type="button" class="question-heading" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false"><span class="number">H4</span><span class="stem">$kx-y+1=0$ 截单位圆，求弦中点轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-12" style="display:none"><p>$x^2+(y-\tfrac12)^2=\tfrac14$，去掉 $(0,0),(0,1)$。由垂直关系得圆；$k=0$ 为切线，竖直割线不属于该直线族。</p></div>
+</article>
+<article class="question" id="q-13">
+<h2><button type="button" class="question-heading" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false"><span class="number">H5</span><span class="stem">$x\sin\alpha+y\cos\alpha+m=0$ 截圆 $x^2+y^2=2$，弦长 $4\sqrt3/3$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-13" style="display:none"><p>$m=\pm\frac{\sqrt6}{3}$，由 $m^2+\left(\frac{2\sqrt3}{3}\right)^2=2$。</p></div>
+</article>
+<article class="question" id="q-14">
+<h2><button type="button" class="question-heading" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false"><span class="number">H6</span><span class="stem">$ax+y-2=0$ 截圆 $(x-1)^2+(y-a)^2=4$，弦端点与圆心构成等边三角形。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-14" style="display:none"><p>D</p></div>
+</article>
+<article class="question" id="q-15">
+<h2><button type="button" class="question-heading" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false"><span class="number">H7</span><span class="stem">$y=x+m$ 截圆 $x^2+y^2=16$，满足 $|MN|\ge\sqrt3|\overrightarrow{OM}+\overrightarrow{ON}|$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-15" style="display:none"><p>D</p></div>
+</article>
+<article class="question" id="q-16">
+<h2><button type="button" class="question-heading" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false"><span class="number">H8</span><span class="stem">圆 $x^2+y^2+2x+4y-3=0$ 上到 $x+y+1=0$ 距离为 $\sqrt2$ 的点数。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-16" style="display:none"><p>C</p></div>
+</article>
+<article class="question" id="q-17">
+<h2><button type="button" class="question-heading" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false"><span class="number">H9</span><span class="stem">垂直于 $4x-3y+18=0$，截圆 $x^2+y^2-2x+4y-20=0$ 的弦长为 $8$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-17" style="display:none"><p>$3x+4y+20=0$ 或 $3x+4y-10=0$。圆心 $(1,-2)$、半径 $5$，所求弦心距为 $3$。</p></div>
+</article>
+<article class="question" id="q-18">
+<h2><button type="button" class="question-heading" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false"><span class="number">H10</span><span class="stem">圆与 $y$ 轴相切，圆心在 $x-3y=0$，$y=x$ 截弦长 $2\sqrt7$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-18" style="display:none"><p>$(x-3)^2+(y-1)^2=9$ 或 $(x+3)^2+(y+1)^2=9$。设圆心 $(3t,t)$，由 $9t^2-2t^2=7$ 得 $t=\pm1$。</p></div>
+</article>
+<article class="question" id="q-19">
+<h2><button type="button" class="question-heading" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false"><span class="number">H11</span><span class="stem">斜率为 $1$ 的割线截圆 $x^2+y^2-2x+4y-4=0$，以弦为直径的圆过原点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-19" style="display:none"><p>存在：$y=x+1$ 或 $y=x-4$。设 $y=x+b$，由 $\overrightarrow{OA}\cdot\overrightarrow{OB}=0$ 得 $b^2+3b-4=0$，两者均为割线。</p></div>
+</article>
+<article class="question" id="q-20">
+<h2><button type="button" class="question-heading" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false"><span class="number">H12</span><span class="stem">同课前例4：参数直线恒交圆于两点及最短弦。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-20" style="display:none"><p>恒过圆内点 $(3,1)$，故总有两个交点。最短弦对应 $2x-y-5=0$，弦长 $4\sqrt5$。</p></div>
+</article>
+<footer class="source-note">图表与完整条件请对照原 PDF。原卷内容缺损或条件不足的题已在答案处标注。</footer>
+</main><script>
+const controls = [...document.querySelectorAll('[data-answer]')];
+function setAnswer(id, visible) {
+  const answer = document.getElementById(id);
+  answer.style.display = visible ? 'block' : 'none';
+  controls.filter(button => button.dataset.answer === id).forEach(button => {
+    button.setAttribute('aria-expanded', String(visible));
+    if (button.dataset.show) button.textContent = visible ? button.dataset.hide : button.dataset.show;
+  });
+}
+function renderMath() {
+  if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.startup.promise = MathJax.startup.promise.then(() => MathJax.typesetPromise());
+  }
+}
+controls.forEach(button => button.addEventListener('click', () => {
+  setAnswer(button.dataset.answer, button.getAttribute('aria-expanded') !== 'true');
+  renderMath();
+}));
+document.querySelectorAll('[data-all]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.answer').forEach(answer => setAnswer(answer.id, button.dataset.all === 'show'));
+  renderMath();
+}));
+</script></body></html>

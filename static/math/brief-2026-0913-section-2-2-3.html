@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.2(3)：椭圆的性质（2） | 简略解析</title><meta name="description" content="题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。">
+<style>:root{color-scheme:light;--ink:#172b3a;--muted:#596c78;--line:#dce5e9;--accent:#146e76;--paper:#fff;--bg:#f3f6f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 24px 72px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px;margin-bottom:28px}a{color:var(--accent);text-underline-offset:4px}
+h1{font-size:clamp(25px,4vw,38px);line-height:1.4;margin:8px 0 16px;letter-spacing:-.025em}.intro,.legend,.source-note{color:var(--muted)}.legend,.source-note{font-size:14px}.count{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--accent)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.toolbar button,.answer-toggle{border:1px solid var(--line);border-radius:7px;padding:8px 14px;background:var(--paper);color:var(--accent);font:inherit;font-size:14px;cursor:pointer}.toolbar button:first-child{background:var(--accent);color:white;border-color:var(--accent)}
+.question{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:14px 0;padding:20px 24px}.question h2{font-size:17px;font-weight:500;line-height:1.75;margin:0 0 13px}.question-heading{width:100%;display:flex;align-items:baseline;gap:15px;text-align:left;background:none;border:0;color:inherit;padding:0;font:inherit;cursor:pointer}.number{color:var(--accent);font-weight:750;white-space:nowrap;font-size:14px}.stem{min-width:0;overflow-wrap:anywhere}.answer{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;overflow-wrap:anywhere}.answer p{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #68b9c3;outline-offset:4px}mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 0}footer{margin-top:32px}
+@media(max-width:600px){main{padding:20px 14px 48px}.question{padding:17px 16px}.question-heading{gap:10px}body{font-size:16px}}
+@media print{body{background:white}nav,.toolbar,.answer-toggle{display:none}.question{break-inside:avoid;border-radius:0}.answer{display:block!important}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']] },options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body><main>
+<nav aria-label="Navigation"><a href="/math/">返回作业目录</a><a href="/math/2026-0913/section-2-2-3.pdf?v=785984e138a0">查看原 PDF</a><a href="/math/en/brief-2026-0913-section-2-2-3.html" lang="en">English</a></nav>
+<div class="count">共 26 个题目或小问</div><h1>2.2(3)：椭圆的性质（2） | 简略解析</h1>
+<p class="intro">题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。</p><p class="legend">编号说明：E = 例题，C = 课堂练习，H = 课后作业；P1–P4 对应原 PDF 页码。其余编号与原卷题号或章节对应。</p>
+<div class="toolbar"><button type="button" data-all="show">全部显示答案</button><button type="button" data-all="hide">全部隐藏答案</button></div>
+<article class="question" id="q-1">
+<h2><button type="button" class="question-heading" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false"><span class="number">E1.1</span><span class="stem">$2x-y=b$ 与 $x^2/75+y^2/25=1$ 仅有一个公共点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-1" style="display:none"><p>$b=\pm5\sqrt{13}$。判别式 $\Delta=12(325-b^2)=0$。</p></div>
+</article>
+<article class="question" id="q-2">
+<h2><button type="button" class="question-heading" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false"><span class="number">E1.2</span><span class="stem">同上，有两个公共点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-2" style="display:none"><p>$-5\sqrt{13}&lt;b&lt;5\sqrt{13}$，由 $\Delta&gt;0$。</p></div>
+</article>
+<article class="question" id="q-3">
+<h2><button type="button" class="question-heading" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false"><span class="number">E1.3</span><span class="stem">同上，没有公共点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-3" style="display:none"><p>$|b|&gt;5\sqrt{13}$，由 $\Delta&lt;0$。</p></div>
+</article>
+<article class="question" id="q-4">
+<h2><button type="button" class="question-heading" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false"><span class="number">E1.4</span><span class="stem">同上，弦长为 $\sqrt{60}/13$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-4" style="display:none"><p>$b=\pm18$。弦长平方为 $60(325-b^2)/169$。</p></div>
+</article>
+<article class="question" id="q-5">
+<h2><button type="button" class="question-heading" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false"><span class="number">E2</span><span class="stem">$x^2/4+y^2=1$ 中斜率为 $1$ 的平行弦中点轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-5" style="display:none"><p>$y=-x/4$，$|x|&lt;4/\sqrt5$。两端点方程相减得中点满足 $x+4y=0$，且须在椭圆内。</p></div>
+</article>
+<article class="question" id="q-6">
+<h2><button type="button" class="question-heading" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false"><span class="number">E3.1</span><span class="stem">$x^2/25+y^2/9=1$ 上的 $P(x_0,y)$ 所张焦点角为 $90^\circ$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-6" style="display:none"><p>$x_0=\pm5\sqrt7/4$。由 $x_0^2+y^2=c^2=16$ 与椭圆联立。</p></div>
+</article>
+<article class="question" id="q-7">
+<h2><button type="button" class="question-heading" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false"><span class="number">E3.2</span><span class="stem">同上，焦点角大于 $90^\circ$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-7" style="display:none"><p>$-5\sqrt7/4&lt;x_0&lt;5\sqrt7/4$，由 $x_0^2+y^2&lt;16$。</p></div>
+</article>
+<article class="question" id="q-8">
+<h2><button type="button" class="question-heading" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false"><span class="number">E4</span><span class="stem">卫星近、远地点距地表 $440,2384$ km，地球半径 $6371$ km，求轨道。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-8" style="display:none"><p>以轨道中心为原点、长轴为 $x$ 轴，$a=7783,c=972,b\approx7722$ km。轨道约为 $x^2/7783^2+y^2/7722^2=1$。</p></div>
+</article>
+<article class="question" id="q-9">
+<h2><button type="button" class="question-heading" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false"><span class="number">C1</span><span class="stem">$x^2/36+y^2/20=1$ 上一点到左焦点距离的最值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-9" style="display:none"><p>最大值 $10$，最小值 $2$，即 $a\pm c=6\pm4$。</p></div>
+</article>
+<article class="question" id="q-10">
+<h2><button type="button" class="question-heading" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false"><span class="number">C2</span><span class="stem">$x^2/45+y^2/20=1$ 上焦点角为直角，求两焦半径之积。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-10" style="display:none"><p>$40$。由 $(r_1+r_2)^2=4a^2$、$r_1^2+r_2^2=4c^2$ 得 $r_1r_2=2b^2$。</p></div>
+</article>
+<article class="question" id="q-11">
+<h2><button type="button" class="question-heading" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false"><span class="number">C3</span><span class="stem">$y=mx-2$ 与 $x^2/4+y^2/3=1$ 交于两点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-11" style="display:none"><p>$m&lt;-1/2$ 或 $m&gt;1/2$。截距须满足 $4&lt;4m^2+3$。</p></div>
+</article>
+<article class="question" id="q-12">
+<h2><button type="button" class="question-heading" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false"><span class="number">H1</span><span class="stem">$y=kx-2$ 与 $2x^2+y^2=2$ 有两个公共点，求 $k$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-12" style="display:none"><p>$k\in(-\infty,-\sqrt2)\cup(\sqrt2,+\infty)$</p></div>
+</article>
+<article class="question" id="q-13">
+<h2><button type="button" class="question-heading" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false"><span class="number">H2</span><span class="stem">$y=2x+b$ 与 $2x^2+y^2=2$ 有公共点，求 $b$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-13" style="display:none"><p>$b\in[-\sqrt6,\sqrt6]$</p></div>
+</article>
+<article class="question" id="q-14">
+<h2><button type="button" class="question-heading" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false"><span class="number">H3</span><span class="stem">$y=2x+b$ 截 $9x^2+4y^2=144$ 的弦长为 $2\sqrt5$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-14" style="display:none"><p>$b=\pm5\sqrt{119}/6$</p></div>
+</article>
+<article class="question" id="q-15">
+<h2><button type="button" class="question-heading" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false"><span class="number">H4</span><span class="stem">$x+2y+m=0$ 截 $3x^2+4y^2=24$ 的弦中点轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-15" style="display:none"><p>$y=3x/2,\quad -\sqrt2&lt;x&lt;\sqrt2$</p></div>
+</article>
+<article class="question" id="q-16">
+<h2><button type="button" class="question-heading" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false"><span class="number">H5</span><span class="stem">任意 $y=kx+1$ 均与 $x^2/5+y^2/m=1$ 这一椭圆相交。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-16" style="display:none"><p>$m\ge1,\quad m\ne5$</p></div>
+</article>
+<article class="question" id="q-17">
+<h2><button type="button" class="question-heading" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false"><span class="number">H6</span><span class="stem">弦斜率为 $-1$，中点与原点连线斜率为 $1/2$，求 $a/b$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-17" style="display:none"><p>$\sqrt2$</p></div>
+</article>
+<article class="question" id="q-18">
+<h2><button type="button" class="question-heading" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false"><span class="number">H7</span><span class="stem">$x^2/9+y^2/4=1$ 的弦中点为 $(1,1)$，选弦所在直线。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-18" style="display:none"><p>B</p></div>
+</article>
+<article class="question" id="q-19">
+<h2><button type="button" class="question-heading" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false"><span class="number">H8</span><span class="stem">焦点 $(\pm2\sqrt2,0)$，长轴长 $6$；求直线 $y=x+2$ 所截弦中点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-19" style="display:none"><p>$(-9/5,1/5)$。椭圆为 $x^2/9+y^2=1$，代入直线并用韦达定理。</p></div>
+</article>
+<article class="question" id="q-20">
+<h2><button type="button" class="question-heading" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false"><span class="number">H9</span><span class="stem">到 $F(2,0)$ 的距离等于到 $x=8$ 距离的一半，求轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-20" style="display:none"><p>椭圆 $x^2/16+y^2/12=1$。由 $4[(x-2)^2+y^2]=(x-8)^2$ 化简。</p></div>
+</article>
+<article class="question" id="q-21">
+<h2><button type="button" class="question-heading" data-answer="answer-21" aria-controls="answer-21" aria-expanded="false"><span class="number">H10</span><span class="stem">按原题近日、远日距离 $4.7\times10^8,7.05\times10^8$ km，求轨道。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-21" aria-controls="answer-21" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-21" style="display:none"><p>以 $10^8$ km 为单位，$a=5.875,c=1.175$，故 $x^2/34.516+y^2/33.135=1$（分母保留三位小数，按题面数据计算）。</p></div>
+</article>
+<article class="question" id="q-22">
+<h2><button type="button" class="question-heading" data-answer="answer-22" aria-controls="answer-22" aria-expanded="false"><span class="number">H11.1</span><span class="stem">$P$ 在 $x^2+2y^2=1$ 上，$A(3,0)$；求 $PA$ 中点轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-22" aria-controls="answer-22" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-22" style="display:none"><p>$(2x-3)^2+8y^2=1$。中点为 $(x,y)$ 时，$P=(2x-3,2y)$。</p></div>
+</article>
+<article class="question" id="q-23">
+<h2><button type="button" class="question-heading" data-answer="answer-23" aria-controls="answer-23" aria-expanded="false"><span class="number">H11.2</span><span class="stem">同上，求 $P$ 到 $x-y-4=0$ 的最短距离。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-23" aria-controls="answer-23" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-23" style="display:none"><p>$2\sqrt2-\sqrt3/2$。椭圆上 $\max(x-y)=\sqrt{3/2}$。</p></div>
+</article>
+<article class="question" id="q-24">
+<h2><button type="button" class="question-heading" data-answer="answer-24" aria-controls="answer-24" aria-expanded="false"><span class="number">H12</span><span class="stem">弦在 $x+2y-2=0$ 上，长 $\sqrt5$，中点 $(m,1/2)$，求椭圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-24" aria-controls="answer-24" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-24" style="display:none"><p>$x^2/4+y^2=1$。中点为 $(1,1/2)$，端点为 $(0,1),(2,0)$。</p></div>
+</article>
+<article class="question" id="q-25">
+<h2><button type="button" class="question-heading" data-answer="answer-25" aria-controls="answer-25" aria-expanded="false"><span class="number">H13.1</span><span class="stem">焦点 $(0,\pm2\sqrt2)$，离心率 $2\sqrt2/3$，求椭圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-25" aria-controls="answer-25" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-25" style="display:none"><p>$x^2+y^2/9=1$。$a=c/e=3,b^2=1$。</p></div>
+</article>
+<article class="question" id="q-26">
+<h2><button type="button" class="question-heading" data-answer="answer-26" aria-controls="answer-26" aria-expanded="false"><span class="number">H13.2</span><span class="stem">同上，弦被 $x=-1/2$ 平分，求弦所在直线的倾斜角范围。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-26" aria-controls="answer-26" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-26" style="display:none"><p>存在。中点 $(-1/2,y_0)$ 满足 $|y_0|&lt;3\sqrt3/2$，弦斜率 $k=9/(2y_0)$，故 $\alpha\in(\pi/3,\pi/2)\cup(\pi/2,2\pi/3)$。这里“被直线平分”指与该直线交于唯一中点；若仅要求中点在该直线上，则还包括 $\alpha=\pi/2$。</p></div>
+</article>
+<footer class="source-note">图表与完整条件请对照原 PDF。原卷内容缺损或条件不足的题已在答案处标注。</footer>
+</main><script>
+const controls = [...document.querySelectorAll('[data-answer]')];
+function setAnswer(id, visible) {
+  const answer = document.getElementById(id);
+  answer.style.display = visible ? 'block' : 'none';
+  controls.filter(button => button.dataset.answer === id).forEach(button => {
+    button.setAttribute('aria-expanded', String(visible));
+    if (button.dataset.show) button.textContent = visible ? button.dataset.hide : button.dataset.show;
+  });
+}
+function renderMath() {
+  if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.startup.promise = MathJax.startup.promise.then(() => MathJax.typesetPromise());
+  }
+}
+controls.forEach(button => button.addEventListener('click', () => {
+  setAnswer(button.dataset.answer, button.getAttribute('aria-expanded') !== 'true');
+  renderMath();
+}));
+document.querySelectorAll('[data-all]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.answer').forEach(answer => setAnswer(answer.id, button.dataset.all === 'show'));
+  renderMath();
+}));
+</script></body></html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数学周末卷2（09/12）：直线、圆与椭圆 | 简略解析</title><meta name="description" content="题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。">
+<style>:root{color-scheme:light;--ink:#172b3a;--muted:#596c78;--line:#dce5e9;--accent:#146e76;--paper:#fff;--bg:#f3f6f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 24px 72px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px;margin-bottom:28px}a{color:var(--accent);text-underline-offset:4px}
+h1{font-size:clamp(25px,4vw,38px);line-height:1.4;margin:8px 0 16px;letter-spacing:-.025em}.intro,.legend,.source-note{color:var(--muted)}.legend,.source-note{font-size:14px}.count{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--accent)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.toolbar button,.answer-toggle{border:1px solid var(--line);border-radius:7px;padding:8px 14px;background:var(--paper);color:var(--accent);font:inherit;font-size:14px;cursor:pointer}.toolbar button:first-child{background:var(--accent);color:white;border-color:var(--accent)}
+.question{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:14px 0;padding:20px 24px}.question h2{font-size:17px;font-weight:500;line-height:1.75;margin:0 0 13px}.question-heading{width:100%;display:flex;align-items:baseline;gap:15px;text-align:left;background:none;border:0;color:inherit;padding:0;font:inherit;cursor:pointer}.number{color:var(--accent);font-weight:750;white-space:nowrap;font-size:14px}.stem{min-width:0;overflow-wrap:anywhere}.answer{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;overflow-wrap:anywhere}.answer p{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #68b9c3;outline-offset:4px}mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 0}footer{margin-top:32px}
+@media(max-width:600px){main{padding:20px 14px 48px}.question{padding:17px 16px}.question-heading{gap:10px}body{font-size:16px}}
+@media print{body{background:white}nav,.toolbar,.answer-toggle{display:none}.question{break-inside:avoid;border-radius:0}.answer{display:block!important}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']] },options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body><main>
+<nav aria-label="Navigation"><a href="/math/">返回作业目录</a><a href="/math/2026-0919/weekend-2-0912.pdf?v=219da28747b8">查看原 PDF</a><a href="/math/en/brief-2026-0919-weekend-2-0912.html" lang="en">English</a></nav>
+<div class="count">共 28 个题目或小问</div><h1>数学周末卷2（09/12）：直线、圆与椭圆 | 简略解析</h1>
+<p class="intro">题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。</p><p class="legend">编号说明：E = 例题，C = 课堂练习，H = 课后作业；P1–P4 对应原 PDF 页码。其余编号与原卷题号或章节对应。</p>
+<div class="toolbar"><button type="button" data-all="show">全部显示答案</button><button type="button" data-all="hide">全部隐藏答案</button></div>
+<article class="question" id="q-1">
+<h2><button type="button" class="question-heading" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false"><span class="number">1</span><span class="stem">倾斜角 $\alpha$ 满足 $\sin\alpha=4/5$，求斜率。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-1" style="display:none"><p>$\pm4/3$</p></div>
+</article>
+<article class="question" id="q-2">
+<h2><button type="button" class="question-heading" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false"><span class="number">2</span><span class="stem">求 $(2k+1)x+(k-1)y-(3k+3)=0$ 恒过的点。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-2" style="display:none"><p>$(2,-1)$</p></div>
+</article>
+<article class="question" id="q-3">
+<h2><button type="button" class="question-heading" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false"><span class="number">3</span><span class="stem">平行直线 $3x+4y-12=0$ 与 $ax+8y-11=0$ 的距离。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-3" style="display:none"><p>$13/10$</p></div>
+</article>
+<article class="question" id="q-4">
+<h2><button type="button" class="question-heading" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false"><span class="number">4</span><span class="stem">长轴长 $12$，离心率 $2/3$，焦点在 $x$ 轴，求椭圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-4" style="display:none"><p>$x^2/36+y^2/20=1$</p></div>
+</article>
+<article class="question" id="q-5">
+<h2><button type="button" class="question-heading" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false"><span class="number">5</span><span class="stem">两直线斜率为 $2x^2-7x-4=0$ 的两根，求夹角。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-5" style="display:none"><p>$\arctan(9/2)$</p></div>
+</article>
+<article class="question" id="q-6">
+<h2><button type="button" class="question-heading" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false"><span class="number">6</span><span class="stem">过 $(1,\sqrt2)$ 的直线截圆 $(x-2)^2+y^2=4$，按圆心角求斜率（角度缺损）。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-6" style="display:none"><p>题目有缺损，本题略</p></div>
+</article>
+<article class="question" id="q-7">
+<h2><button type="button" class="question-heading" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false"><span class="number">7</span><span class="stem">$x+3y-5=0$、$3kx-y+1=0$ 与坐标轴围成的四边形共圆，求 $k$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-7" style="display:none"><p>$1$</p></div>
+</article>
+<article class="question" id="q-8">
+<h2><button type="button" class="question-heading" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false"><span class="number">8</span><span class="stem">$y=x+k$ 与右半圆 $x=\sqrt{1-y^2}$ 恰有一个公共点，求 $k$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-8" style="display:none"><p>$k\in\{-\sqrt2\}\cup(-1,1]$</p></div>
+</article>
+<article class="question" id="q-9">
+<h2><button type="button" class="question-heading" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false"><span class="number">9</span><span class="stem">$x^2/a^2+y^2/9=1$，右焦点 $F$；$N$ 为 $MF$ 中点，$MF=2ON=4$，求离心率。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-9" style="display:none"><p>$\sqrt7/4$</p></div>
+</article>
+<article class="question" id="q-10">
+<h2><button type="button" class="question-heading" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false"><span class="number">10</span><span class="stem">椭圆焦距 $2$，两焦半径和 $4$，焦点角正弦 $1/2$，求中心到该点切线距离。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-10" style="display:none"><p>$\sqrt{2+\sqrt3}$</p></div>
+</article>
+<article class="question" id="q-11">
+<h2><button type="button" class="question-heading" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false"><span class="number">11</span><span class="stem">圆 $(x+4)^2+(y-1)^2=r^2$ 上点关于 $y=x+1$ 的对称点可落在 $(x-4)^2+y^2=4$ 上，求 $r$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-11" style="display:none"><p>$r\in[3,7]$</p></div>
+</article>
+<article class="question" id="q-12">
+<h2><button type="button" class="question-heading" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false"><span class="number">12</span><span class="stem">$2x+y=1$，求 $x+\sqrt{x^2+y^2}$ 最小值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-12" style="display:none"><p>$4/5$</p></div>
+</article>
+<article class="question" id="q-13">
+<h2><button type="button" class="question-heading" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false"><span class="number">13</span><span class="stem">$x^2+y^2+4mx-2y+5m=0$ 表示圆的充要条件。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-13" style="display:none"><p>C；$m&lt;1/4$ 或 $m&gt;1$</p></div>
+</article>
+<article class="question" id="q-14">
+<h2><button type="button" class="question-heading" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false"><span class="number">14</span><span class="stem">$y=kx-\sqrt3$ 与 $2x+3y-6=0$ 的交点在第一象限，选倾斜角范围。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-14" style="display:none"><p>D</p></div>
+</article>
+<article class="question" id="q-15">
+<h2><button type="button" class="question-heading" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false"><span class="number">15</span><span class="stem">$ax+by=1$ 与单位圆相交，判断 $(a,b)$ 与圆的位置。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-15" style="display:none"><p>C</p></div>
+</article>
+<article class="question" id="q-16">
+<h2><button type="button" class="question-heading" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false"><span class="number">16</span><span class="stem">太极图阴影区域内，求 $y/(x-2)$ 最小值（图见原卷）。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-16" style="display:none"><p>C</p></div>
+</article>
+<article class="question" id="q-17">
+<h2><button type="button" class="question-heading" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false"><span class="number">17.1</span><span class="stem">$p:x^2/(m+1)+y^2/(4-m)=1$ 为横焦点椭圆，求 $p$ 真时 $m$ 范围。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-17" style="display:none"><p>$3/2&lt;m&lt;4$。要求 $m+1&gt;4-m&gt;0$。</p></div>
+</article>
+<article class="question" id="q-18">
+<h2><button type="button" class="question-heading" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false"><span class="number">17.2</span><span class="stem">再有 $q:\exists x\in\mathbb R,x^2-mx+1&lt;0$，求 $p,q$ 同真。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-18" style="display:none"><p>$2&lt;m&lt;4$。$q$ 等价于 $m^2-4&gt;0$，与上一范围取交集。</p></div>
+</article>
+<article class="question" id="q-19">
+<h2><button type="button" class="question-heading" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false"><span class="number">18.1</span><span class="stem">圆 $(x+2)^2+y^2=1$ 上点到 $3x+4y+12=0$ 距离最值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-19" style="display:none"><p>最大 $11/5$，最小 $1/5$。圆心距直线 $6/5$，加减半径 $1$。</p></div>
+</article>
+<article class="question" id="q-20">
+<h2><button type="button" class="question-heading" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false"><span class="number">18.2</span><span class="stem">$(x-1)^2+(y+2)^2=4$，求 $(x+2)^2+(y-2)^2$ 最值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-20" style="display:none"><p>最大 $49$，最小 $9$。定点 $(-2,2)$ 到圆心距离 $5$，所求为 $(5\pm2)^2$。</p></div>
+</article>
+<article class="question" id="q-21">
+<h2><button type="button" class="question-heading" data-answer="answer-21" aria-controls="answer-21" aria-expanded="false"><span class="number">19.1</span><span class="stem">中心为原点、焦点在 $x$ 轴，短轴长 $2$，离心率 $\sqrt3/2$，求椭圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-21" aria-controls="answer-21" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-21" style="display:none"><p>$x^2/4+y^2=1$。$b=1$，$1-b^2/a^2=3/4$ 得 $a=2$。</p></div>
+</article>
+<article class="question" id="q-22">
+<h2><button type="button" class="question-heading" data-answer="answer-22" aria-controls="answer-22" aria-expanded="false"><span class="number">19.2</span><span class="stem">$P$ 在长轴上，过 $P$ 作斜率 $1/2$ 的弦 $AB$，证明 $PA^2+PB^2$ 为定值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-22" aria-controls="answer-22" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-22" style="display:none"><p>定值为 $5$。设 $P=(t,0)$，联立得 $2x^2-2tx+t^2-4=0$，故 $PA^2+PB^2=\frac54[(x_1-t)^2+(x_2-t)^2]=5$。</p></div>
+</article>
+<article class="question" id="q-23">
+<h2><button type="button" class="question-heading" data-answer="answer-23" aria-controls="answer-23" aria-expanded="false"><span class="number">20.1</span><span class="stem">从 $P(-1,1)$ 向 $(x-2)^2+y^2=1$ 作切线，求方程。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-23" aria-controls="answer-23" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-23" style="display:none"><p>$y=1$；$3x+4y-1=0$。令 $y=k(x+1)+1$，圆心到直线距离等于 $1$，得 $k=0,-3/4$。</p></div>
+</article>
+<article class="question" id="q-24">
+<h2><button type="button" class="question-heading" data-answer="answer-24" aria-controls="answer-24" aria-expanded="false"><span class="number">20.2</span><span class="stem">$P(-1,t)$ 的两切点为 $A,B$，求 $AB$ 最小值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-24" aria-controls="answer-24" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-24" style="display:none"><p>$4\sqrt2/3$，在 $t=0$ 取得。$PM^2=t^2+9$，$AB=2\sqrt{1-1/(t^2+9)}$。</p></div>
+</article>
+<article class="question" id="q-25">
+<h2><button type="button" class="question-heading" data-answer="answer-25" aria-controls="answer-25" aria-expanded="false"><span class="number">20.3</span><span class="stem">两条切线与 $y$ 轴分别交于 $S,T$，求 $ST$ 最小值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-25" aria-controls="answer-25" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-25" style="display:none"><p>$\sqrt2/2$，在 $t=0$ 取得。切线斜率满足 $8k^2+6tk+t^2-1=0$，故 $ST=|k_1-k_2|=\sqrt{t^2+8}/4$。</p></div>
+</article>
+<article class="question" id="q-26">
+<h2><button type="button" class="question-heading" data-answer="answer-26" aria-controls="answer-26" aria-expanded="false"><span class="number">21.1</span><span class="stem">圆 $C:(x+4)^2+y^2=4$ 与圆 $D$ 外切；$D=(0,3)$，其圆与 $y$ 轴交 $A,B$，$P=(-3,0)$，求 $\tan\angle APB$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-26" aria-controls="answer-26" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-26" style="display:none"><p>$2$。$CD=5$，动圆半径 $3$，端点为 $(0,0),(0,6)$。</p></div>
+</article>
+<article class="question" id="q-27">
+<h2><button type="button" class="question-heading" data-answer="answer-27" aria-controls="answer-27" aria-expanded="false"><span class="number">21.2</span><span class="stem">$D$ 在 $y$ 轴上运动，求 $\tan\angle APB$ 最大值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-27" aria-controls="answer-27" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-27" style="display:none"><p>$12/5$，在 $D=(0,0)$ 取得。设 $s=CD\ge4$，半径 $s-2$，则正切为 $6(s-2)/(4s-11)$，随 $s$ 递减。</p></div>
+</article>
+<article class="question" id="q-28">
+<h2><button type="button" class="question-heading" data-answer="answer-28" aria-controls="answer-28" aria-expanded="false"><span class="number">21.3</span><span class="stem">是否存在 $x$ 轴上定点 $Q$，使 $\angle AQB$ 不随动圆变化？</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-28" aria-controls="answer-28" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-28" style="display:none"><p>存在，$Q=(\pm2\sqrt3,0)$，恒为 $60^\circ$。设 $Q=(q,0)$，正切为 $2|q|(s-2)/(q^2+4s-20)$；令分母与 $s-2$ 成比例，得 $q^2=12$。</p></div>
+</article>
+<footer class="source-note">图表与完整条件请对照原 PDF。原卷内容缺损或条件不足的题已在答案处标注。</footer>
+</main><script>
+const controls = [...document.querySelectorAll('[data-answer]')];
+function setAnswer(id, visible) {
+  const answer = document.getElementById(id);
+  answer.style.display = visible ? 'block' : 'none';
+  controls.filter(button => button.dataset.answer === id).forEach(button => {
+    button.setAttribute('aria-expanded', String(visible));
+    if (button.dataset.show) button.textContent = visible ? button.dataset.hide : button.dataset.show;
+  });
+}
+function renderMath() {
+  if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.startup.promise = MathJax.startup.promise.then(() => MathJax.typesetPromise());
+  }
+}
+controls.forEach(button => button.addEventListener('click', () => {
+  setAnswer(button.dataset.answer, button.getAttribute('aria-expanded') !== 'true');
+  renderMath();
+}));
+document.querySelectorAll('[data-all]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.answer').forEach(answer => setAnswer(answer.id, button.dataset.all === 'show'));
+  renderMath();
+}));
+</script></body></html>

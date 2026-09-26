@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数学2.1(2)：圆的一般方程 | 简略解析</title><meta name="description" content="题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。">
+<style>:root{color-scheme:light;--ink:#172b3a;--muted:#596c78;--line:#dce5e9;--accent:#146e76;--paper:#fff;--bg:#f3f6f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 24px 72px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px;margin-bottom:28px}a{color:var(--accent);text-underline-offset:4px}
+h1{font-size:clamp(25px,4vw,38px);line-height:1.4;margin:8px 0 16px;letter-spacing:-.025em}.intro,.legend,.source-note{color:var(--muted)}.legend,.source-note{font-size:14px}.count{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--accent)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.toolbar button,.answer-toggle{border:1px solid var(--line);border-radius:7px;padding:8px 14px;background:var(--paper);color:var(--accent);font:inherit;font-size:14px;cursor:pointer}.toolbar button:first-child{background:var(--accent);color:white;border-color:var(--accent)}
+.question{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:14px 0;padding:20px 24px}.question h2{font-size:17px;font-weight:500;line-height:1.75;margin:0 0 13px}.question-heading{width:100%;display:flex;align-items:baseline;gap:15px;text-align:left;background:none;border:0;color:inherit;padding:0;font:inherit;cursor:pointer}.number{color:var(--accent);font-weight:750;white-space:nowrap;font-size:14px}.stem{min-width:0;overflow-wrap:anywhere}.answer{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;overflow-wrap:anywhere}.answer p{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #68b9c3;outline-offset:4px}mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 0}footer{margin-top:32px}
+@media(max-width:600px){main{padding:20px 14px 48px}.question{padding:17px 16px}.question-heading{gap:10px}body{font-size:16px}}
+@media print{body{background:white}nav,.toolbar,.answer-toggle{display:none}.question{break-inside:avoid;border-radius:0}.answer{display:block!important}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']] },options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body><main>
+<nav aria-label="Navigation"><a href="/math/">返回作业目录</a><a href="/math/2026-0906/section-2-1-2.pdf?v=c83a2790551d">查看原 PDF</a><a href="/math/en/brief-2026-0906-section-2-1-2.html" lang="en">English</a></nav>
+<div class="count">共 19 个题目或小问</div><h1>数学2.1(2)：圆的一般方程 | 简略解析</h1>
+<p class="intro">题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。</p><p class="legend">编号说明：E = 例题，C = 课堂练习，H = 课后作业；P1–P4 对应原 PDF 页码。其余编号与原卷题号或章节对应。</p>
+<div class="toolbar"><button type="button" data-all="show">全部显示答案</button><button type="button" data-all="hide">全部隐藏答案</button></div>
+<article class="question" id="q-1">
+<h2><button type="button" class="question-heading" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false"><span class="number">E1</span><span class="stem">判断四个二次方程是否表示圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-1" style="display:none"><p>(1) 无实点；(2) 圆 $(x-1)^2+(y-2)^2=5$；(3) 点 $(1,2)$；(4) 仅 $|a|&gt;2$ 时为圆。均配方后判断半径平方是否为正。</p></div>
+</article>
+<article class="question" id="q-2">
+<h2><button type="button" class="question-heading" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false"><span class="number">E2</span><span class="stem">圆过 $(1,0),(3,0),(2,2)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-2" style="display:none"><p>$(x-2)^2+(y-\tfrac34)^2=\tfrac{25}{16}$。圆心在 $x=2$ 上，再令到三点距离相等。</p></div>
+</article>
+<article class="question" id="q-3">
+<h2><button type="button" class="question-heading" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false"><span class="number">E3</span><span class="stem">圆 $x^2+y^2-2x+t=0$ 与 $2x+y=0$ 相交，$\overrightarrow{OA}\cdot\overrightarrow{OB}=-1$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-3" style="display:none"><p>$t=-1$，圆为 $x^2+y^2-2x-1=0$。代入 $y=-2x$，由韦达定理得内积 $5x_1x_2=t$。</p></div>
+</article>
+<article class="question" id="q-4">
+<h2><button type="button" class="question-heading" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false"><span class="number">E4</span><span class="stem">圆过 $(4,2),(-1,3)$，两轴四个截距之和为 $2$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-4" style="display:none"><p>$x^2+y^2-2x-12=0$。设一般式，由两点条件及 $-D-E=2$ 解得 $D=-2,E=0,F=-12$。</p></div>
+</article>
+<article class="question" id="q-5">
+<h2><button type="button" class="question-heading" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false"><span class="number">C1</span><span class="stem">圆过 $(3,2),(1,1),(2,-1)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-5" style="display:none"><p>$x^2+y^2-5x-y+4=0$。将三点代入一般式解系数。</p></div>
+</article>
+<article class="question" id="q-6">
+<h2><button type="button" class="question-heading" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false"><span class="number">C2</span><span class="stem">讨论 $x^2+y^2+ax+2y+2=0$ 的曲线。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-6" style="display:none"><p>配方为 $(x+a/2)^2+(y+1)^2=a^2/4-1$。$|a|&gt;2$ 为圆，$|a|=2$ 为点 $(-a/2,-1)$，$|a|&lt;2$ 无实点。</p></div>
+</article>
+<article class="question" id="q-7">
+<h2><button type="button" class="question-heading" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false"><span class="number">H1</span><span class="stem">$a^2x^2+(a+2)y^2+2ax+a=0$ 表示圆，求 $a$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-7" style="display:none"><p>$a=-1$。</p></div>
+</article>
+<article class="question" id="q-8">
+<h2><button type="button" class="question-heading" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false"><span class="number">H2</span><span class="stem">过 $(1,\sqrt3)$ 作单位圆的切线。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-8" style="display:none"><p>$x=1$；$x-\sqrt3y+2=0$。</p></div>
+</article>
+<article class="question" id="q-9">
+<h2><button type="button" class="question-heading" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false"><span class="number">H3</span><span class="stem">从原点向 $x^2+y^2-12y+27=0$ 作两条切线，求夹角。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-9" style="display:none"><p>$60^\circ$。</p></div>
+</article>
+<article class="question" id="q-10">
+<h2><button type="button" class="question-heading" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false"><span class="number">H4</span><span class="stem">$Ax+By=0$ 与圆 $x^2+y^2+Ax+By=0$ 的关系。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-10" style="display:none"><p>相切于原点。</p></div>
+</article>
+<article class="question" id="q-11">
+<h2><button type="button" class="question-heading" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false"><span class="number">H5</span><span class="stem">$0&lt;a&lt;1$ 时，原点与 $x^2+y^2+2ax+2y+(a-1)^2=0$ 的位置关系。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-11" style="display:none"><p>B</p></div>
+</article>
+<article class="question" id="q-12">
+<h2><button type="button" class="question-heading" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false"><span class="number">H6</span><span class="stem">$x^2+y^2+2\sqrt2x-2\sqrt2y=0$ 的对称性。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-12" style="display:none"><p>B</p></div>
+</article>
+<article class="question" id="q-13">
+<h2><button type="button" class="question-heading" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false"><span class="number">H7</span><span class="stem">过原点及 $(a,0),(0,b)$ 的圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-13" style="display:none"><p>$x^2+y^2-ax-by=0$。三点代入一般式得 $F=0,D=-a,E=-b$。</p></div>
+</article>
+<article class="question" id="q-14">
+<h2><button type="button" class="question-heading" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false"><span class="number">H8</span><span class="stem">讨论 $x^2+y^2-2y+\lambda(x^2+y^2-2x)=0$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-14" style="display:none"><p>$\lambda=-1$ 时为直线 $y=x$；否则为圆，圆心 $(\frac{\lambda}{1+\lambda},\frac1{1+\lambda})$，半径 $\frac{\sqrt{\lambda^2+1}}{|1+\lambda|}$。</p></div>
+</article>
+<article class="question" id="q-15">
+<h2><button type="button" class="question-heading" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false"><span class="number">H9</span><span class="stem">$A=C\ne0,B=0$ 是一般二次方程表示圆的什么条件？</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-15" style="display:none"><p>B</p></div>
+</article>
+<article class="question" id="q-16">
+<h2><button type="button" class="question-heading" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false"><span class="number">H10</span><span class="stem">圆 $x^2+y^2+ax+by+c=0$ 关于 $x-2y=0$ 对称。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-16" style="display:none"><p>D</p></div>
+</article>
+<article class="question" id="q-17">
+<h2><button type="button" class="question-heading" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false"><span class="number">H11</span><span class="stem">$ax^2+ay^2-4(a-1)x+4y=0$ 表示圆的条件及最小半径圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-17" style="display:none"><p>$a\ne0$。$r^2=8(1/a-1/2)^2+2$，故 $a=2$ 时半径最小，方程 $(x-1)^2+(y+1)^2=2$。</p></div>
+</article>
+<article class="question" id="q-18">
+<h2><button type="button" class="question-heading" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false"><span class="number">H12</span><span class="stem">$A(-5,0),B(5,0)$，$PA=kPB$（$k&gt;0$）的轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-18" style="display:none"><p>$k=1$ 时为 $x=0$；$k\ne1$ 时为圆 $(x-\frac{5(k^2+1)}{k^2-1})^2+y^2=\frac{100k^2}{(k^2-1)^2}$。由距离等式平方配方。</p></div>
+</article>
+<article class="question" id="q-19">
+<h2><button type="button" class="question-heading" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false"><span class="number">H13</span><span class="stem">含参数 $t$ 的圆：存在条件、最大面积及 $P(3,4t^2)$ 在圆外的条件。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-19" style="display:none"><p>(1) $-\frac17&lt;t&lt;1$；(2) $(x-\frac{24}{7})^2+(y+\frac{13}{49})^2=\frac{16}{7}$；(3) $t\in(-\frac17,0)\cup(\frac34,1)$。配方得圆心 $(t+3,4t^2-1)$、$r^2=-7t^2+6t+1$；圆外条件为 $t^2+1&gt;r^2$。</p></div>
+</article>
+<footer class="source-note">图表与完整条件请对照原 PDF。原卷内容缺损或条件不足的题已在答案处标注。</footer>
+</main><script>
+const controls = [...document.querySelectorAll('[data-answer]')];
+function setAnswer(id, visible) {
+  const answer = document.getElementById(id);
+  answer.style.display = visible ? 'block' : 'none';
+  controls.filter(button => button.dataset.answer === id).forEach(button => {
+    button.setAttribute('aria-expanded', String(visible));
+    if (button.dataset.show) button.textContent = visible ? button.dataset.hide : button.dataset.show;
+  });
+}
+function renderMath() {
+  if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.startup.promise = MathJax.startup.promise.then(() => MathJax.typesetPromise());
+  }
+}
+controls.forEach(button => button.addEventListener('click', () => {
+  setAnswer(button.dataset.answer, button.getAttribute('aria-expanded') !== 'true');
+  renderMath();
+}));
+document.querySelectorAll('[data-all]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.answer').forEach(answer => setAnswer(answer.id, button.dataset.all === 'show'));
+  renderMath();
+}));
+</script></body></html>

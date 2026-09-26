@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.2(1)：椭圆的标准方程 | 简略解析</title><meta name="description" content="题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。">
+<style>:root{color-scheme:light;--ink:#172b3a;--muted:#596c78;--line:#dce5e9;--accent:#146e76;--paper:#fff;--bg:#f3f6f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 24px 72px}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px;margin-bottom:28px}a{color:var(--accent);text-underline-offset:4px}
+h1{font-size:clamp(25px,4vw,38px);line-height:1.4;margin:8px 0 16px;letter-spacing:-.025em}.intro,.legend,.source-note{color:var(--muted)}.legend,.source-note{font-size:14px}.count{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--accent)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.toolbar button,.answer-toggle{border:1px solid var(--line);border-radius:7px;padding:8px 14px;background:var(--paper);color:var(--accent);font:inherit;font-size:14px;cursor:pointer}.toolbar button:first-child{background:var(--accent);color:white;border-color:var(--accent)}
+.question{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:14px 0;padding:20px 24px}.question h2{font-size:17px;font-weight:500;line-height:1.75;margin:0 0 13px}.question-heading{width:100%;display:flex;align-items:baseline;gap:15px;text-align:left;background:none;border:0;color:inherit;padding:0;font:inherit;cursor:pointer}.number{color:var(--accent);font-weight:750;white-space:nowrap;font-size:14px}.stem{min-width:0;overflow-wrap:anywhere}.answer{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;overflow-wrap:anywhere}.answer p{margin:0}button:focus-visible,a:focus-visible{outline:3px solid #68b9c3;outline-offset:4px}mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 0}footer{margin-top:32px}
+@media(max-width:600px){main{padding:20px 14px 48px}.question{padding:17px 16px}.question-heading{gap:10px}body{font-size:16px}}
+@media print{body{background:white}nav,.toolbar,.answer-toggle{display:none}.question{break-inside:avoid;border-radius:0}.answer{display:block!important}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']] },options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body><main>
+<nav aria-label="Navigation"><a href="/math/">返回作业目录</a><a href="/math/2026-0913/section-2-2-1.pdf?v=645f508226f7">查看原 PDF</a><a href="/math/en/brief-2026-0913-section-2-2-1.html" lang="en">English</a></nav>
+<div class="count">共 27 个题目或小问</div><h1>2.2(1)：椭圆的标准方程 | 简略解析</h1>
+<p class="intro">题目概述用于定位原卷；点击题目或按钮展开答案。选择、填空给出答案，计算与证明保留必要步骤。</p><p class="legend">编号说明：E = 例题，C = 课堂练习，H = 课后作业；P1–P4 对应原 PDF 页码。其余编号与原卷题号或章节对应。</p>
+<div class="toolbar"><button type="button" data-all="show">全部显示答案</button><button type="button" data-all="hide">全部隐藏答案</button></div>
+<article class="question" id="q-1">
+<h2><button type="button" class="question-heading" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false"><span class="number">E1</span><span class="stem">焦距 $6$，到两焦点距离和 $10$，求椭圆标准方程。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-1" aria-controls="answer-1" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-1" style="display:none"><p>$\frac{x^2}{25}+\frac{y^2}{16}=1$ 或 $\frac{x^2}{16}+\frac{y^2}{25}=1$。$a=5,c=3,b^2=16$，两种焦点方向都要考虑。</p></div>
+</article>
+<article class="question" id="q-2">
+<h2><button type="button" class="question-heading" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false"><span class="number">E2</span><span class="stem">$B(3,0),C(-3,0)$，三角形周长 $16$，求 $A$ 的轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-2" aria-controls="answer-2" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-2" style="display:none"><p>$\frac{x^2}{25}+\frac{y^2}{16}=1$，$y\ne0$。$AB+AC=10$，并排除退化三角形。</p></div>
+</article>
+<article class="question" id="q-3">
+<h2><button type="button" class="question-heading" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false"><span class="number">E3</span><span class="stem">焦点在 $x$ 轴、焦距 $2\sqrt6$，过 $(\sqrt3,\sqrt2)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-3" aria-controls="answer-3" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-3" style="display:none"><p>$\frac{x^2}{9}+\frac{y^2}{3}=1$。联立 $a^2-b^2=6$、$3/a^2+2/b^2=1$。</p></div>
+</article>
+<article class="question" id="q-4">
+<h2><button type="button" class="question-heading" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false"><span class="number">E4</span><span class="stem">动圆与 $(x+4)^2+y^2=100$ 内切并过 $(4,0)$，求圆心轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-4" aria-controls="answer-4" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-4" style="display:none"><p>$\frac{x^2}{25}+\frac{y^2}{9}=1$。到 $(-4,0),(4,0)$ 的距离和为 $10$。</p></div>
+</article>
+<article class="question" id="q-5">
+<h2><button type="button" class="question-heading" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false"><span class="number">C1.1</span><span class="stem">到 $(-3,0),(3,0)$ 的距离和为 $10$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-5" aria-controls="answer-5" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-5" style="display:none"><p>$\frac{x^2}{25}+\frac{y^2}{16}=1$；$a=5,c=3$。</p></div>
+</article>
+<article class="question" id="q-6">
+<h2><button type="button" class="question-heading" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false"><span class="number">C1.2</span><span class="stem">到 $(0,-2),(0,2)$ 的距离和为 $12$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-6" aria-controls="answer-6" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-6" style="display:none"><p>$\frac{x^2}{32}+\frac{y^2}{36}=1$；$a=6,c=2$。</p></div>
+</article>
+<article class="question" id="q-7">
+<h2><button type="button" class="question-heading" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false"><span class="number">C1.3</span><span class="stem">到 $(-4,0),(4,0)$ 的距离和为 $8$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-7" aria-controls="answer-7" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-7" style="display:none"><p>$y=0,-4\le x\le4$，距离和等于两定点距离，故为线段。</p></div>
+</article>
+<article class="question" id="q-8">
+<h2><button type="button" class="question-heading" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false"><span class="number">C2.1</span><span class="stem">焦点在 $y$ 轴、焦距 $2\sqrt{15}$，过 $(0,-4)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-8" aria-controls="answer-8" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-8" style="display:none"><p>$x^2+\frac{y^2}{16}=1$；$a=4,b^2=16-15=1$。</p></div>
+</article>
+<article class="question" id="q-9">
+<h2><button type="button" class="question-heading" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false"><span class="number">C2.2</span><span class="stem">焦距 $4$，过 $(\sqrt5,0)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-9" aria-controls="answer-9" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-9" style="display:none"><p>$\frac{x^2}{5}+y^2=1$ 或 $\frac{x^2}{5}+\frac{y^2}{9}=1$；分别考虑两种焦点方向。</p></div>
+</article>
+<article class="question" id="q-10">
+<h2><button type="button" class="question-heading" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false"><span class="number">C3</span><span class="stem">$x^2/m+y^2/4=1$ 焦点在 $x$ 轴、焦距 $2$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-10" aria-controls="answer-10" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-10" style="display:none"><p>$m=5$，由 $m-4=1$。</p></div>
+</article>
+<article class="question" id="q-11">
+<h2><button type="button" class="question-heading" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false"><span class="number">C4</span><span class="stem">$x^2/(4-k)+y^2/(6+k)=1$ 表示椭圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-11" aria-controls="answer-11" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-11" style="display:none"><p>$-6&lt;k&lt;4$，且 $k\ne-1$；分母均正且不等。</p></div>
+</article>
+<article class="question" id="q-12">
+<h2><button type="button" class="question-heading" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false"><span class="number">H1</span><span class="stem">$x^2/m+y^2/(m^2-2)=1$ 表示椭圆的条件。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-12" aria-controls="answer-12" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-12" style="display:none"><p>$m\in(\sqrt2,2)\cup(2,+\infty)$。</p></div>
+</article>
+<article class="question" id="q-13">
+<h2><button type="button" class="question-heading" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false"><span class="number">H2</span><span class="stem">$x^2/16+y^2/m^2=1$（$m&gt;0$）焦点在 $x$ 轴，求焦距。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-13" aria-controls="answer-13" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-13" style="display:none"><p>$2\sqrt{16-m^2}$，$0&lt;m&lt;4$。</p></div>
+</article>
+<article class="question" id="q-14">
+<h2><button type="button" class="question-heading" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false"><span class="number">H3</span><span class="stem">动点到定点 $F$ 与到直线 $x=8$ 的距离之比为 $1:2$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-14" aria-controls="answer-14" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-14" style="display:none"><p>题目有缺损，本题略</p></div>
+</article>
+<article class="question" id="q-15">
+<h2><button type="button" class="question-heading" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false"><span class="number">H4</span><span class="stem">$A(0,-2),B(0,2)$，三角形周长 $12$，求 $C$ 的轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-15" aria-controls="answer-15" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-15" style="display:none"><p>$\frac{x^2}{12}+\frac{y^2}{16}=1$，$x\ne0$。</p></div>
+</article>
+<article class="question" id="q-16">
+<h2><button type="button" class="question-heading" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false"><span class="number">H5</span><span class="stem">焦点 $(-3,0),(3,0)$，添加一个条件确定 $x^2/25+y^2/16=1$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-16" aria-controls="answer-16" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-16" style="display:none"><p>长轴长为 $10$（答案不唯一）。</p></div>
+</article>
+<article class="question" id="q-17">
+<h2><button type="button" class="question-heading" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false"><span class="number">H6</span><span class="stem">$16x^2+ky^2=16k$ 的焦点在 $y$ 轴。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-17" aria-controls="answer-17" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-17" style="display:none"><p>D</p></div>
+</article>
+<article class="question" id="q-18">
+<h2><button type="button" class="question-heading" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false"><span class="number">H7.1</span><span class="stem">焦点 $(\pm6,0)$，过 $(0,8)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-18" aria-controls="answer-18" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-18" style="display:none"><p>$\frac{x^2}{100}+\frac{y^2}{64}=1$；$b=8,c=6$。</p></div>
+</article>
+<article class="question" id="q-19">
+<h2><button type="button" class="question-heading" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false"><span class="number">H7.2</span><span class="stem">过 $(0,-2),(6,0)$ 的标准椭圆。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-19" aria-controls="answer-19" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-19" style="display:none"><p>$\frac{x^2}{36}+\frac{y^2}{4}=1$；两点给出半轴长。</p></div>
+</article>
+<article class="question" id="q-20">
+<h2><button type="button" class="question-heading" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false"><span class="number">H7.3</span><span class="stem">焦距 $4$，过 $(2\sqrt6/3,-2\sqrt6/3)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-20" aria-controls="answer-20" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-20" style="display:none"><p>$\frac{x^2}{8}+\frac{y^2}{4}=1$ 或 $\frac{x^2}{4}+\frac{y^2}{8}=1$。代入点坐标并用 $a^2-b^2=4$。</p></div>
+</article>
+<article class="question" id="q-21">
+<h2><button type="button" class="question-heading" data-answer="answer-21" aria-controls="answer-21" aria-expanded="false"><span class="number">H7.4</span><span class="stem">过 $(-3/2,5/2),(\sqrt3,\sqrt5)$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-21" aria-controls="answer-21" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-21" style="display:none"><p>$\frac{x^2}{6}+\frac{y^2}{10}=1$。设方程 $Ax^2+By^2=1$，代入两点解系数。</p></div>
+</article>
+<article class="question" id="q-22">
+<h2><button type="button" class="question-heading" data-answer="answer-22" aria-controls="answer-22" aria-expanded="false"><span class="number">H8</span><span class="stem">到 $(\pm9/4,0)$ 的距离和为 $25/2$。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-22" aria-controls="answer-22" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-22" style="display:none"><p>$\frac{16x^2}{625}+\frac{y^2}{34}=1$，由 $a=25/4,c=9/4$。</p></div>
+</article>
+<article class="question" id="q-23">
+<h2><button type="button" class="question-heading" data-answer="answer-23" aria-controls="answer-23" aria-expanded="false"><span class="number">H9</span><span class="stem">$x^2/25+y^2/9=1$ 的焦点三角形周长。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-23" aria-controls="answer-23" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-23" style="display:none"><p>$18$。周长 $2a+2c=10+8$。</p></div>
+</article>
+<article class="question" id="q-24">
+<h2><button type="button" class="question-heading" data-answer="answer-24" aria-controls="answer-24" aria-expanded="false"><span class="number">H10</span><span class="stem">$AB=24$，边 $AC,BC$ 上两条中线长之和 $39$，求重心轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-24" aria-controls="answer-24" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-24" style="display:none"><p>取 $A(-12,0),B(12,0)$，重心轨迹为 $x^2/169+y^2/25=1$，$y\ne0$。重心分中线为 $2:1$，故 $GA+GB=26$。</p></div>
+</article>
+<article class="question" id="q-25">
+<h2><button type="button" class="question-heading" data-answer="answer-25" aria-controls="answer-25" aria-expanded="false"><span class="number">H11</span><span class="stem">三边 $a&gt;b&gt;c$ 成等差数列，$A(-1,0),C(1,0)$，求 $B$ 的轨迹形状。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-25" aria-controls="answer-25" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-25" style="display:none"><p>椭圆 $x^2/4+y^2/3=1$ 上满足 $-2&lt;x&lt;0$ 的两段弧。$a+c=2b=4$，且 $BC&gt;BA$ 要求 $x&lt;0$，排除退化顶点。</p></div>
+</article>
+<article class="question" id="q-26">
+<h2><button type="button" class="question-heading" data-answer="answer-26" aria-controls="answer-26" aria-expanded="false"><span class="number">H12</span><span class="stem">动圆外切 $(x+1)^2+y^2=1$、内切 $(x-1)^2+y^2=9$，求圆心轨迹。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-26" aria-controls="answer-26" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-26" style="display:none"><p>$x^2/4+y^2/3=1$，去掉 $(-2,0)$。两圆心距离和为 $(r+1)+(3-r)=4$，并要求 $r&gt;0$。</p></div>
+</article>
+<article class="question" id="q-27">
+<h2><button type="button" class="question-heading" data-answer="answer-27" aria-controls="answer-27" aria-expanded="false"><span class="number">H13</span><span class="stem">椭圆焦点三角形最大面积为 $1$，求长轴长最小值。</span></button></h2>
+<button type="button" class="answer-toggle" data-answer="answer-27" aria-controls="answer-27" aria-expanded="false" data-show="显示答案" data-hide="隐藏答案">显示答案</button>
+<div class="answer" id="answer-27" style="display:none"><p>$2\sqrt2$。最大面积 $bc=1$，故 $a^2=b^2+c^2\ge2bc=2$，$b=c=1$ 时取等。</p></div>
+</article>
+<footer class="source-note">图表与完整条件请对照原 PDF。原卷内容缺损或条件不足的题已在答案处标注。</footer>
+</main><script>
+const controls = [...document.querySelectorAll('[data-answer]')];
+function setAnswer(id, visible) {
+  const answer = document.getElementById(id);
+  answer.style.display = visible ? 'block' : 'none';
+  controls.filter(button => button.dataset.answer === id).forEach(button => {
+    button.setAttribute('aria-expanded', String(visible));
+    if (button.dataset.show) button.textContent = visible ? button.dataset.hide : button.dataset.show;
+  });
+}
+function renderMath() {
+  if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.startup.promise = MathJax.startup.promise.then(() => MathJax.typesetPromise());
+  }
+}
+controls.forEach(button => button.addEventListener('click', () => {
+  setAnswer(button.dataset.answer, button.getAttribute('aria-expanded') !== 'true');
+  renderMath();
+}));
+document.querySelectorAll('[data-all]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.answer').forEach(answer => setAnswer(answer.id, button.dataset.all === 'show'));
+  renderMath();
+}));
+</script></body></html>
