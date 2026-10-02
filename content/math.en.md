@@ -1,11 +1,15 @@
 +++
 date = '2026-09-13T00:00:00+08:00'
-lastmod = '2026-09-26T17:06:38+08:00'
+lastmod = '2026-10-02T12:55:57+08:00'
 draft = false
 title = 'Math Homework'
 +++
 
 Original homework PDFs in Chinese with brief solutions in English, grouped by date.
+
+## October 2
+
+- [2.5: Relative Positions of Lines and Conics](/math/2026-1002/section-2-5.pdf) (4 pages) · [Brief solutions](/math/en/brief-2026-1002-section-2-5.html)
 
 ## September 19
 
