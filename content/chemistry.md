@@ -1,6 +1,6 @@
 +++
 date = '2026-09-13T00:00:00+08:00'
-lastmod = '2026-10-02T10:23:04+08:00'
+lastmod = '2026-10-02T10:27:04+08:00'
 draft = false
 title = '化学作业'
 +++
@@ -23,7 +23,7 @@ title = '化学作业'
 
 ## 09/06
 
-- **高二上化学有效作业1：工业合成氨** — [去手写](/chemistry/2026-0906/effective-homework-1-clean.pdf) · [简略解析](/chemistry/brief-2026-0906-effective-homework-1-original.html) · [详细解析](/chemistry/2026-1001/effective-homework-1-solutions.pdf)
+- [高二上化学有效作业1：工业合成氨](/chemistry/2026-0906/effective-homework-1-clean.pdf) · [简略解析](/chemistry/brief-2026-0906-effective-homework-1-original.html) · [详细解析](/chemistry/2026-1001/effective-homework-1-solutions.pdf)
 - [高二上化学有效作业2：工业制硫酸](/chemistry/2026-0906/weekend-2.pdf) · [简略解析](/chemistry/brief-2026-0906-weekend-2.html) · [详细解析](/chemistry/2026-1001/effective-homework-2-solutions.pdf)
 - [高二化学周末练习1：能量与平衡综合](/chemistry/2026-0906/weekend-1.pdf) · [简略解析](/chemistry/brief-2026-0906-weekend-1.html)
-- **高二化学知识点整理1：化工生产与平衡** — [保留手写](/chemistry/2026-0906/knowledge-summary-1-original.pdf) · [去手写](/chemistry/2026-0906/knowledge-summary-1-clean.pdf) · [简略解析](/chemistry/brief-2026-0906-knowledge-summary-1-original.html)
+- [高二化学知识点整理1：化工生产与平衡](/chemistry/2026-0906/knowledge-summary-1-clean.pdf) · [简略解析](/chemistry/brief-2026-0906-knowledge-summary-1-original.html) · [详细解析](/chemistry/2026-0906/knowledge-summary-1-original.pdf)

@@ -1,6 +1,6 @@
 +++
 date = '2026-09-13T00:00:00+08:00'
-lastmod = '2026-10-02T10:23:04+08:00'
+lastmod = '2026-10-02T10:27:04+08:00'
 draft = false
 title = 'Chemistry Homework'
 +++
@@ -23,7 +23,7 @@ Original chemistry homework and study notes in Chinese with brief solutions in E
 
 ## September 6
 
-- **Grade 11 Chemistry Effective Homework 1: Industrial Synthesis of Ammonia** — [Handwriting removed](/chemistry/2026-0906/effective-homework-1-clean.pdf) · [Brief solutions](/chemistry/en/brief-2026-0906-effective-homework-1-original.html) · [Detailed solutions (Chinese)](/chemistry/2026-1001/effective-homework-1-solutions.pdf)
+- [Grade 11 Chemistry Effective Homework 1: Industrial Synthesis of Ammonia](/chemistry/2026-0906/effective-homework-1-clean.pdf) · [Brief solutions](/chemistry/en/brief-2026-0906-effective-homework-1-original.html) · [Detailed solutions (Chinese)](/chemistry/2026-1001/effective-homework-1-solutions.pdf)
 - [Grade 11 Chemistry Effective Homework 2: Industrial Production of Sulfuric Acid](/chemistry/2026-0906/weekend-2.pdf) · [Brief solutions](/chemistry/en/brief-2026-0906-weekend-2.html) · [Detailed solutions (Chinese)](/chemistry/2026-1001/effective-homework-2-solutions.pdf)
 - [Grade 11 Chemistry Weekend Practice 1: Energy and Equilibrium](/chemistry/2026-0906/weekend-1.pdf) · [Brief solutions](/chemistry/en/brief-2026-0906-weekend-1.html)
-- **Grade 11 Chemistry Knowledge Summary 1: Chemical Production and Equilibrium** — [With handwriting](/chemistry/2026-0906/knowledge-summary-1-original.pdf) · [Handwriting removed](/chemistry/2026-0906/knowledge-summary-1-clean.pdf) · [Brief solutions](/chemistry/en/brief-2026-0906-knowledge-summary-1-original.html)
+- [Grade 11 Chemistry Knowledge Summary 1: Chemical Production and Equilibrium](/chemistry/2026-0906/knowledge-summary-1-clean.pdf) · [Brief solutions](/chemistry/en/brief-2026-0906-knowledge-summary-1-original.html) · [Detailed solutions (Chinese)](/chemistry/2026-0906/knowledge-summary-1-original.pdf)
