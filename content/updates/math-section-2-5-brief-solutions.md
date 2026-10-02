@@ -1,6 +1,7 @@
 +++
 date = '2026-10-02T12:55:57+08:00'
 draft = false
+aliases = ['/posts/math-section-2-5-brief-solutions/']
 title = '网站更新：新增数学 2.5 作业与简略解析'
 tags = ['网站更新', '数学']
 ShowToc = false

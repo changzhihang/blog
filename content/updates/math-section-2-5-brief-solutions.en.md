@@ -1,6 +1,7 @@
 +++
 date = '2026-10-02T12:55:57+08:00'
 draft = false
+aliases = ['/posts/math-section-2-5-brief-solutions/']
 title = 'Site Update: Math Section 2.5 and Brief Solutions'
 tags = ['Site Updates', 'Math']
 ShowToc = false

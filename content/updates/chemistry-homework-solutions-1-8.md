@@ -2,6 +2,7 @@
 date = '2026-10-01T16:22:23+08:00'
 lastmod = '2026-10-02T10:23:04+08:00'
 draft = false
+aliases = ['/posts/chemistry-homework-solutions-1-8/']
 title = '网站更新：补充化学有效作业 1–8 解析'
 tags = ['网站更新', '化学']
 ShowToc = false

@@ -10,6 +10,7 @@ defaultContentLanguage = 'zh'
   pagerSize = 10
 
 [params]
+  mainSections = ['posts']
   # Show reading time on posts
   ShowReadingTime = true
   # Show a table of contents on posts
@@ -40,6 +41,11 @@ defaultContentLanguage = 'zh'
         name = "Posts"
         url = "/posts/"
         weight = 10
+      [[languages.zh.menu.main]]
+        identifier = "updates"
+        name = "网站更新"
+        url = "/updates/"
+        weight = 11
       [[languages.zh.menu.main]]
         identifier = "math"
         name = "数学作业"
@@ -84,6 +90,11 @@ defaultContentLanguage = 'zh'
         name = "Posts"
         url = "/posts/"
         weight = 10
+      [[languages.en.menu.main]]
+        identifier = "updates"
+        name = "Updates"
+        url = "/updates/"
+        weight = 11
       [[languages.en.menu.main]]
         identifier = "math"
         name = "Math"
