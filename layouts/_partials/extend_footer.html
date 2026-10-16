@@ -1,0 +1,7 @@
+{{- $home := "" | relLangURL -}}
+<a class="discussion-launcher" href="{{ $home }}#public-chat" aria-label="{{ i18n "discussion_open" }}">
+  <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l-3 3V11.5A7.5 7.5 0 0 1 9.5 4h3a7.5 7.5 0 0 1 7.5 7.5Z"/><path d="M7 10h8M7 14h5"/></svg>
+  <span>{{ i18n "discussion_chat" }}</span>
+</a>
+{{- $script := resources.Get "js/discussion.js" | minify | fingerprint -}}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>

@@ -1,0 +1,39 @@
+{{- $labels := dict -}}
+{{- range slice "loading" "empty" "unavailable" "sending" "send" "sent" "reply" "replying" "cancel" "rate_limited" "invalid_message" "invalid_reply" "failed" "updated" "older" "refresh" -}}
+  {{- $labels = merge $labels (dict . (i18n (printf "discussion_%s" .))) -}}
+{{- end -}}
+<section id="{{ .id }}" class="discussion{{ if .lobby }} discussion-lobby{{ end }}" data-discussion data-room="{{ .room }}" data-labels="{{ $labels | jsonify }}" aria-labelledby="{{ .id }}-title">
+  <div class="discussion-heading">
+    <div>
+      <p class="discussion-eyebrow">{{ i18n "discussion_eyebrow" }}</p>
+      <h2 id="{{ .id }}-title">{{ if .lobby }}{{ i18n "discussion_lobby" }}{{ else }}{{ i18n "discussion_comments" }}{{ end }}</h2>
+    </div>
+    <span class="discussion-tag">{{ i18n "discussion_no_login" }}</span>
+  </div>
+  <p class="discussion-intro">{{ if .lobby }}{{ i18n "discussion_lobby_intro" }}{{ else }}{{ i18n "discussion_comments_intro" }}{{ end }}</p>
+  <div class="discussion-toolbar">
+    <button type="button" data-older hidden>{{ i18n "discussion_older" }}</button>
+    <button type="button" data-refresh>{{ i18n "discussion_refresh" }}</button>
+    <span data-connection role="status" aria-live="polite">{{ i18n "discussion_loading" }}</span>
+  </div>
+  <ol class="discussion-messages" data-messages aria-label="{{ i18n "discussion_messages" }}" tabindex="0"></ol>
+  <p class="discussion-empty" data-empty>{{ i18n "discussion_loading" }}</p>
+  <form class="discussion-form" data-form>
+    <div class="discussion-identity">
+      <label for="{{ .id }}-nickname">{{ i18n "discussion_nickname" }}</label>
+      <input id="{{ .id }}-nickname" name="nickname" type="text" maxlength="32" required autocomplete="nickname" placeholder="{{ i18n "discussion_nickname_hint" }}" aria-describedby="{{ .id }}-notice">
+    </div>
+    <div class="discussion-reply" data-reply hidden>
+      <span data-reply-label></span>
+      <button type="button" data-cancel>{{ i18n "discussion_cancel" }}</button>
+    </div>
+    <label class="discussion-body-label" for="{{ .id }}-body">{{ i18n "discussion_message" }}</label>
+    <textarea id="{{ .id }}-body" name="body" rows="3" maxlength="1000" required placeholder="{{ i18n "discussion_message_hint" }}" aria-describedby="{{ .id }}-notice"></textarea>
+    <div class="discussion-submit-row">
+      <p id="{{ .id }}-notice">{{ i18n "discussion_public_notice" }}</p>
+      <button class="discussion-send" type="submit" data-send>{{ i18n "discussion_send" }} <span aria-hidden="true">↗</span></button>
+    </div>
+    <p class="discussion-status" data-status role="status" aria-live="polite"></p>
+  </form>
+  <noscript><p>{{ i18n "discussion_javascript" }}</p></noscript>
+</section>

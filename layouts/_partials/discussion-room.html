@@ -1,0 +1,7 @@
+{{- $canonical := . -}}
+{{- range .AllTranslations -}}
+  {{- if eq .Lang "zh" -}}{{- $canonical = . -}}{{- end -}}
+{{- end -}}
+{{- $room := $canonical.RelPermalink -}}
+{{- if strings.HasPrefix $room "/en/" -}}{{- $room = printf "/%s" (strings.TrimPrefix "/en/" $room) -}}{{- end -}}
+{{- return $room -}}

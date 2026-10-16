@@ -12,6 +12,10 @@ defaults:
   run:
     shell: bash
 
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -43,15 +47,32 @@ jobs:
             --minify \
             --baseURL "${SITE_URL}"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install and test discussion service
+        run: |
+          npm ci
+          npm test
+
+      - name: Prepare discussion database
+        run: npm run provision
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
       # Create the Pages project on first run; ignore the error if it already exists
       - name: Ensure Cloudflare Pages project exists
-        run: npx wrangler@3 pages project create "${CF_PROJECT}" --production-branch main || true
+        run: npx wrangler pages project create "${CF_PROJECT}" --production-branch main || true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Deploy to Cloudflare Pages
-        run: npx wrangler@3 pages deploy public --project-name "${CF_PROJECT}" --branch main
+        run: npx wrangler pages deploy public --project-name "${CF_PROJECT}" --branch "${GITHUB_REF_NAME}"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

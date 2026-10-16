@@ -5,3 +5,7 @@
 
 # macOS system files
 .DS_Store
+
+# Local development dependencies and state
+/node_modules/
+/.wrangler/
