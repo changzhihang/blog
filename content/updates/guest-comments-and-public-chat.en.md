@@ -7,6 +7,6 @@ ShowToc = false
 ShowReadingTime = false
 +++
 
-Guest comments and a public chat are now available without signing in. Leave a comment below any post, or chat with the author and other visitors on the homepage. Choose or change your nickname before sending, reply to messages, and browse the history with automatic updates. The “Let's chat” button opens the public chat from any page. Chinese and English versions share the same conversations.
+Guest comments and a public chat are now available without signing in. Click “Let's chat” in the bottom-right corner to open a compact public chat with the author and other visitors. The small button below each article expands its comment section. Choose or change your nickname before sending, reply to messages, and browse the history with automatic updates. Chinese and English versions share the same conversations.
 
 [Open the public chat](/en/#public-chat) · [Browse posts](/en/posts/)

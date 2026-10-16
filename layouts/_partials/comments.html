@@ -1,1 +1,7 @@
-{{- partial "discussion.html" (dict "room" (partial "discussion-room.html" .) "id" "comments" "lobby" false) -}}
+<button type="button" class="discussion-toggle" data-discussion-toggle="comments-panel" aria-controls="comments-panel" aria-expanded="false">
+  {{ partial "discussion-icon.html" . }}
+  <span>{{ i18n "discussion_chat" }}</span>
+</button>
+<div id="comments-panel" class="discussion-collapsible" hidden tabindex="-1">
+  {{- partial "discussion.html" (dict "room" (partial "discussion-room.html" .) "id" "comments" "lobby" false "closable" true) -}}
+</div>
