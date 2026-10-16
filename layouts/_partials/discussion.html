@@ -5,10 +5,14 @@
 <section id="{{ .id }}" class="discussion{{ if .lobby }} discussion-lobby{{ end }}" data-discussion data-room="{{ .room }}" data-labels="{{ $labels | jsonify }}" aria-labelledby="{{ .id }}-title">
   <div class="discussion-heading">
     <div>
-      <p class="discussion-eyebrow">{{ i18n "discussion_eyebrow" }}</p>
       <h2 id="{{ .id }}-title">{{ if .lobby }}{{ i18n "discussion_lobby" }}{{ else }}{{ i18n "discussion_comments" }}{{ end }}</h2>
     </div>
     <span class="discussion-tag">{{ i18n "discussion_no_login" }}</span>
+    {{- if .closable }}
+    <button type="button" class="discussion-close" data-discussion-close aria-label="{{ i18n "discussion_close" }}">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>
+    </button>
+    {{- end }}
   </div>
   <p class="discussion-intro">{{ if .lobby }}{{ i18n "discussion_lobby_intro" }}{{ else }}{{ i18n "discussion_comments_intro" }}{{ end }}</p>
   <div class="discussion-toolbar">
@@ -28,7 +32,7 @@
       <button type="button" data-cancel>{{ i18n "discussion_cancel" }}</button>
     </div>
     <label class="discussion-body-label" for="{{ .id }}-body">{{ i18n "discussion_message" }}</label>
-    <textarea id="{{ .id }}-body" name="body" rows="3" maxlength="1000" required placeholder="{{ i18n "discussion_message_hint" }}" aria-describedby="{{ .id }}-notice"></textarea>
+    <textarea id="{{ .id }}-body" name="body" rows="2" maxlength="1000" required placeholder="{{ i18n "discussion_message_hint" }}" aria-describedby="{{ .id }}-notice"></textarea>
     <div class="discussion-submit-row">
       <p id="{{ .id }}-notice">{{ i18n "discussion_public_notice" }}</p>
       <button class="discussion-send" type="submit" data-send>{{ i18n "discussion_send" }} <span aria-hidden="true">↗</span></button>

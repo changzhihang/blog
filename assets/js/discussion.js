@@ -108,12 +108,13 @@
 
     function schedule() {
       clearTimeout(timer);
-      if (visible && !document.hidden && navigator.onLine) {
+      if (visible && !root.closest("[hidden]") && !document.hidden && navigator.onLine) {
         timer = setTimeout(() => load(), Math.min(10000 * 2 ** failures, 60000));
       }
     }
 
     function load(mode = "new") {
+      if (root.closest("[hidden]")) return;
       if (loading) return loading;
       loading = (async () => {
         older.disabled = true;
@@ -186,6 +187,13 @@
 
     older.addEventListener("click", () => load("older"));
     refresh.addEventListener("click", () => load());
+    root.addEventListener("discussion:visibility", event => {
+      clearTimeout(timer);
+      if (event.detail.open) {
+        if (!sending) nickname.value = safeStorage("localStorage", "discussion-nickname") || nickname.value;
+        if (!document.hidden && navigator.onLine) load();
+      }
+    });
     document.addEventListener("visibilitychange", () => {
       clearTimeout(timer);
       if (!document.hidden && visible) load();
@@ -199,4 +207,46 @@
     }, { rootMargin: "120px" });
     observer.observe(root);
   }
+
+  const panels = new Map();
+  for (const opener of document.querySelectorAll("[data-discussion-toggle]")) {
+    const panel = document.getElementById(opener.dataset.discussionToggle);
+    if (!panel) continue;
+    const setOpen = (open, restoreFocus = false) => {
+      panel.hidden = !open;
+      opener.setAttribute("aria-expanded", String(open));
+      panel.querySelector("[data-discussion]").dispatchEvent(new CustomEvent("discussion:visibility", { detail: { open } }));
+      if (open) panel.focus({ preventScroll: true });
+      else if (restoreFocus) opener.focus({ preventScroll: true });
+    };
+    panels.set(panel.id, { panel, opener, setOpen });
+    opener.addEventListener("click", () => setOpen(panel.hidden, !panel.hidden));
+    panel.querySelector("[data-discussion-close]").addEventListener("click", () => setOpen(false, true));
+  }
+
+  document.addEventListener("keydown", event => {
+    if (event.key !== "Escape") return;
+    const activePanel = event.target.closest(".discussion-popover, .discussion-collapsible");
+    const control = panels.get(activePanel?.id || "public-chat-panel");
+    if (control && !control.panel.hidden) {
+      event.preventDefault();
+      control.setOpen(false, true);
+    }
+  });
+  document.addEventListener("click", event => {
+    const control = panels.get("public-chat-panel");
+    if (control && !control.panel.hidden && !control.panel.contains(event.target) && !control.opener.contains(event.target)) {
+      control.setOpen(false);
+    }
+  });
+
+  const openLinkedPanel = () => {
+    const id = { "#public-chat": "public-chat-panel", "#comments": "comments-panel" }[window.location.hash];
+    const control = panels.get(id);
+    if (!control) return;
+    control.setOpen(true);
+    if (id === "comments-panel") control.panel.scrollIntoView({ block: "start" });
+  };
+  window.addEventListener("hashchange", openLinkedPanel);
+  openLinkedPanel();
 })();

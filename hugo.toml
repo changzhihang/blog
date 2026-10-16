@@ -16,9 +16,7 @@ defaultContentLanguage = 'zh'
   # Show a table of contents on posts
   ShowToc = true
   comments = true
-
-  [params.homeInfoParams]
-    discussion = true
+  disableSpecial1stPost = true
 
 [outputs]
   home = ['HTML', 'RSS', 'DiscussionRooms']

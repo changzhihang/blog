@@ -1,7 +1,9 @@
-{{- $home := "" | relLangURL -}}
-<a class="discussion-launcher" href="{{ $home }}#public-chat" aria-label="{{ i18n "discussion_open" }}">
-  <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l-3 3V11.5A7.5 7.5 0 0 1 9.5 4h3a7.5 7.5 0 0 1 7.5 7.5Z"/><path d="M7 10h8M7 14h5"/></svg>
+<div id="public-chat-panel" class="discussion-popover" role="dialog" aria-labelledby="public-chat-title" hidden tabindex="-1">
+  {{- partial "discussion.html" (dict "room" "lobby" "id" "public-chat" "lobby" true "closable" true) -}}
+</div>
+<button type="button" class="discussion-launcher" data-discussion-toggle="public-chat-panel" aria-controls="public-chat-panel" aria-expanded="false" aria-label="{{ i18n "discussion_open" }}">
+  {{ partial "discussion-icon.html" . }}
   <span>{{ i18n "discussion_chat" }}</span>
-</a>
+</button>
 {{- $script := resources.Get "js/discussion.js" | minify | fingerprint -}}
 <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
