@@ -127,8 +127,13 @@ async function postMessage(request, env, url) {
   ]);
   const saved = result[2].results[0];
   if (saved) return json({ id: saved.id }, 201);
-  const duplicate = await db.prepare("SELECT id FROM discussion_messages WHERE request_id = ?").bind(requestId).first();
-  if (duplicate) return json({ id: duplicate.id }, 200);
+  const duplicate = await db.prepare("SELECT * FROM discussion_messages WHERE request_id = ?").bind(requestId).first();
+  if (duplicate) {
+    if (duplicate.room !== room || duplicate.nickname !== nickname || duplicate.body !== body || duplicate.reply_to !== replyTo) {
+      return json({ error: "request_conflict" }, 409);
+    }
+    return json({ id: duplicate.id }, 200);
+  }
   return json({ error: "rate_limited" }, 429, { "Retry-After": "10" });
 }
 

@@ -12,11 +12,11 @@ const origin = "https://example.com";
 
 before(async () => {
   runtime = new Miniflare(convertV4MiniflareOptions({
-      name: "test-discussions",
-      modules: true,
-      script: "export default { fetch() { return new Response('ok'); } };",
-      compatibilityDate: "2026-10-01",
-      d1Databases: ["DISCUSSIONS"],
+    name: "test-discussions",
+    modules: true,
+    script: "export default { fetch() { return new Response('ok'); } };",
+    compatibilityDate: "2026-10-01",
+    d1Databases: ["DISCUSSIONS"],
   }));
   db = await runtime.getD1Database("DISCUSSIONS");
   const schema = await readFile(new URL("../migrations/0001_discussions.sql", import.meta.url), "utf8");
@@ -86,6 +86,13 @@ test("parallel submissions cannot bypass the per-visitor cooldown", async () => 
   const responses = await Promise.all(Array.from({ length: 8 }, () => post(input(), headers)));
   assert.equal(responses.filter(response => response.status === 201).length, 1);
   assert.equal(responses.filter(response => response.status === 429).length, 7);
+  assert.equal((await (await get()).json()).messages.length, 1);
+});
+
+test("concurrent reuse of a request ID never acknowledges a different payload", async () => {
+  const message = input();
+  const responses = await Promise.all([post(message), post({ ...message, body: "Different payload" })]);
+  assert.deepEqual(responses.map(response => response.status).sort(), [201, 409]);
   assert.equal((await (await get()).json()).messages.length, 1);
 });
 

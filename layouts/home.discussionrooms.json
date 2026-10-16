@@ -1,5 +1,7 @@
 {{- $rooms := slice "lobby" -}}
-{{- range site.RegularPages -}}
-  {{- $rooms = $rooms | append (partial "discussion-room.html" .) -}}
+{{- range hugo.Sites -}}
+  {{- range .RegularPages -}}
+    {{- $rooms = $rooms | append (partial "discussion-room.html" .) -}}
+  {{- end -}}
 {{- end -}}
-{{- $rooms | jsonify -}}
+{{- $rooms | uniq | jsonify -}}
