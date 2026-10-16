@@ -15,6 +15,19 @@ defaultContentLanguage = 'zh'
   ShowReadingTime = true
   # Show a table of contents on posts
   ShowToc = true
+  comments = true
+
+  [params.homeInfoParams]
+    discussion = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'DiscussionRooms']
+
+[outputFormats.DiscussionRooms]
+  mediaType = 'application/json'
+  baseName = 'discussion-rooms'
+  isPlainText = true
+  notAlternative = true
 
 # Preserve LaTeX math delimiters so KaTeX can render them client-side
 [markup]

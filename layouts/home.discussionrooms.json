@@ -1,0 +1,5 @@
+{{- $rooms := slice "lobby" -}}
+{{- range site.RegularPages -}}
+  {{- $rooms = $rooms | append (partial "discussion-room.html" .) -}}
+{{- end -}}
+{{- $rooms | jsonify -}}
